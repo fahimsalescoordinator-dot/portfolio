@@ -1,3136 +1,410 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="utf-8" />
-<link rel="stylesheet" href="css/reset.css" />
-<link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" href="css/typography.css" />
-<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
-<link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.4.css" media="screen" />
-<script type="text/javascript" src="../twitter.com/javascripts/blogger.js"></script>
-<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
-<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>
-<script type="text/javascript" src="js/fGallery.jquery.js"></script>
-<script type="text/javascript" src="js/highlightRegex.js"></script>
-<script type="text/javascript" src="js/jquery.backgroundPosition.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
-<style>
-@font-face {
-	font-family: 'Titillium';
-	src: url('type/TitilliumText22L003-webfont.eot');
-	src: url('type/TitilliumText22L003-webfontd41d.eot?#iefix') format('eot'),  url('type/TitilliumText22L003-webfont.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-    font-family: 'Droid Sans';
-    src: url('type/DroidSans-webfont.eot');
-    src: url('type/DroidSans-webfontd41d.eot?#iefix') format('embedded-opentype'),
-         url('type/DroidSans-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-#apDiv1 {
-	position:absolute;
-	width:469px;
-	height:82px;
-	z-index:10000;
-	left: 171px;
-	top: 113px;
-}
-#apDiv2 {
-	position:absolute;
-	width:200px;
-	height:115px;
-	z-index:10001;
-	left: 6px;
-	top: 6646px;
-}
-</style>
-<title>fahimnoorb Portfolio 03003732537</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<meta name="robots" content="index, follow" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FNB Freelancer Multimedia consultant in Karachi</title>
+  <meta name="description" content="Business website for Fahim Noor Bhatti offering multimedia and software services, warehouse solutions, tax prep, online consultancy, online teaching, car sale and purchase help, maintenance, solar services, and delivery support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root{--bg:#090909;--surface:#141414;--muted:#b9b9b9;--ink:#f5f5f5;--brand:#ffffff;--sun:#d6d6d6;--line:rgba(255,255,255,.14);--shadow:0 18px 50px rgba(0,0,0,.35);--radius:26px;--max:1180px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Outfit",sans-serif;background:radial-gradient(circle at top left,rgba(255,255,255,.08),transparent 24%),radial-gradient(circle at top right,rgba(255,255,255,.05),transparent 26%),var(--bg);color:var(--ink);line-height:1.6}
+    a{text-decoration:none;color:inherit} .container{width:min(var(--max),calc(100% - 32px));margin:0 auto}
+    header{position:sticky;top:0;z-index:40;background:rgba(9,9,9,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:72px}
+    .top-contact{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;padding:8px 0 12px;border-top:1px solid rgba(23,33,43,.06);color:var(--muted);font-size:.88rem}
+    .brand{display:flex;align-items:center;gap:14px;min-width:0}
+    .brand-logo,.hero-mark{display:inline-flex;align-items:center;justify-content:center;background:#171717;box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line)}
+    .brand-logo{width:70px;height:70px;padding:8px;border-radius:18px;font-size:1.45rem;font-weight:800;letter-spacing:-.06em;color:var(--brand)}
+    .hero-mark{font-size:1.85rem;font-weight:800;letter-spacing:-.08em;color:var(--brand)}
+    .brand-copy strong{display:block;color:var(--brand);font-size:1rem}
+    .brand-copy span{color:var(--muted);font-size:.82rem}
+      nav ul{list-style:none;display:flex;align-items:center;gap:18px}
+      nav li{position:relative}
+      nav .submenu{list-style:none;position:absolute;top:100%;left:0;min-width:240px;display:none;flex-direction:column;gap:0;background:rgba(18,18,18,.98);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);z-index:50}
+      nav .submenu a{display:block;padding:12px 16px;white-space:nowrap}
+      nav .submenu li+li{border-top:1px solid var(--line)}
+      nav li.has-dropdown:hover>.submenu,nav li.has-dropdown:focus-within>.submenu{display:flex}
+    nav a{color:var(--muted);font-weight:600}
+    nav a:hover,nav a:focus-visible{color:var(--brand)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;font-weight:700}
+    .nav-cta{padding:12px 18px;background:var(--brand);color:#fff;box-shadow:var(--shadow)}
+    .nav-price{background:var(--sun);color:#090909}
+    .menu-btn{display:none;border:0;background:transparent;font-size:1.4rem;color:var(--ink)}
+    .slider-strip,.hero{padding:24px 0 34px}
+    .hero-grid,.services,.packages,.pricing,.equipment,.benefits,.steps,.contact-grid,.difference-grid{display:grid;gap:20px}
+    .hero-grid{grid-template-columns:1.1fr .9fr}
+    .hero-copy,.hero-card,.card{background:rgba(20,20,20,.92);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-copy,.hero-card,.card{padding:28px}
+    .slider-shell{position:relative;overflow:hidden;border-radius:32px;min-height:300px;box-shadow:var(--shadow);background:#0f1720}
+    .slider-track{display:grid}
+    .slide{grid-area:1/1;min-height:300px;display:flex;align-items:flex-end;padding:34px;background-size:cover;background-position:center;opacity:0;transition:opacity .8s ease}
+    .slide.active{opacity:1}
+    .slide::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.82))}
+    .slide-content{position:relative;z-index:1;max-width:560px;color:#fff}
+    .slide-content h2{font-size:clamp(1.45rem,3.6vw,2.35rem);line-height:1.04;letter-spacing:-.04em;margin:12px 0}
+    .slide-content p{color:rgba(255,255,255,.88);font-size:.95rem}
+    .slider-dots{position:absolute;right:24px;bottom:22px;display:flex;gap:8px;z-index:2}
+    .slider-dots button{width:12px;height:12px;border:0;border-radius:50%;background:rgba(255,255,255,.42);cursor:pointer}
+    .slider-dots button.active{background:#fff;transform:scale(1.05)}
+    .eyebrow,.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;font-size:.88rem;font-weight:700}
+    .eyebrow,.pill{background:rgba(255,255,255,.08);color:#f5f5f5;border:1px solid rgba(255,255,255,.12)}
+    .slide .eyebrow{background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(8px);text-shadow:0 1px 2px rgba(15,23,32,.35)}
+    h1{margin-top:16px;font-size:clamp(1.75rem,4.4vw,3rem);line-height:1.04;letter-spacing:-.04em}
+    h1 span,.hero-card h2 span{color:var(--brand)}
+    .hero-copy p,.section-head p,.card p,.card li,.hero-card p{color:var(--muted)}
+    .hero-actions,.contact-actions,.footer-socials{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{min-height:48px;padding:0 20px}
+    .btn-primary{background:var(--brand);color:#090909;box-shadow:var(--shadow)}
+    .btn-secondary{background:#141414;border:1px solid var(--line);color:#f5f5f5}
+    .btn-whatsapp{background:#ffffff;color:#090909;box-shadow:var(--shadow)}
+    .hero-points,.stats{display:grid;gap:12px}
+    .hero-points{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:24px}
+    .hero-points div,.stats .mini{padding:16px;border-radius:18px;background:#171717;border:1px solid var(--line)}
+    .hero-visual{min-height:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:16px;color:#fff;padding:30px;border-radius:var(--radius);background:linear-gradient(160deg,rgba(0,0,0,.82),rgba(38,38,38,.82)),url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80") center/cover}
+    .hero-mark{width:110px;height:110px;padding:12px;border-radius:26px}
+    .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .stats .mini{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14)}
+    .hero-visual .pill,.hero-visual h2,.hero-visual p,.hero-visual span,.hero-visual strong{color:#fff}
+    .hero-visual .pill{background:rgba(255,255,255,.14)}
+    .hero-visual h2 span{display:inline-block;padding:0 10px;border-radius:14px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.24);color:#fff}
+    section{padding:42px 0} .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+    .section-head h2{font-size:clamp(1.55rem,3.5vw,2.45rem);line-height:1.08;letter-spacing:-.03em}
+    .services{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .packages{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .pricing{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .equipment{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .benefits{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .steps{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .contact-grid{grid-template-columns:1fr .95fr;align-items:stretch}
+    .difference-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;margin-bottom:16px;background:rgba(255,255,255,.08);color:var(--brand);font-size:1.3rem;border:1px solid var(--line)}
+    .package-tag{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.08);color:var(--brand);font-size:.84rem;font-weight:700;margin-bottom:12px;border:1px solid var(--line)}
+    .featured{background:linear-gradient(180deg,#1a1a1a,#121212);border-color:var(--line)}
+    .price-featured{background:linear-gradient(180deg,#ffffff,#bfbfbf);color:#090909}
+    .price-featured p,.price-featured li,.availability p,.availability li{color:rgba(255,255,255,.82)}
+    .price{font-size:2.6rem;line-height:1;margin:16px 0 10px;letter-spacing:-.05em}
+    .list{list-style:none;display:grid;gap:10px;margin-top:16px}
+    .list li{display:flex;gap:10px}
+    .contact-card,.booking-card{height:100%;display:flex;flex-direction:column}
+    .contact-card h2,.booking-card h2{margin-top:16px}
+    .contact-card .contact-actions{margin-top:auto;padding-top:18px}
+    .contact-list{display:grid;gap:14px;margin-top:20px}
+    .contact-item{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
+    .contact-item strong{display:block;margin-bottom:4px}
+    .contact-item p{margin:0}
+    .booking-card form{margin-top:20px}
+    .estimate-list{list-style:none;display:grid;gap:12px;margin-top:16px}
+    .estimate-list li{display:flex;justify-content:space-between;gap:14px;padding-bottom:10px;border-bottom:1px solid var(--line);font-weight:600}
+    .estimate-list span:last-child{color:var(--brand)}
+    .availability{background:linear-gradient(180deg,#1a1a1a,#050505);color:#fff}
+    .availability-time{font-size:2rem;font-weight:800;line-height:1.05;margin-top:10px}
+    .difference-card{overflow:hidden;padding:0}
+    .difference-image{aspect-ratio:16/10;width:100%;object-fit:cover;display:block}
+    .difference-copy{padding:24px}
+    .difference-copy h3{margin-bottom:10px}
+    .difference-copy p{margin-bottom:8px}
+    input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:14px;font:inherit;background:#111;color:#f5f5f5}
+    textarea{min-height:140px;resize:vertical}
+    label{display:block;font-weight:600;margin-bottom:8px}
+    .field-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    form{display:grid;gap:16px}
+    footer{padding:24px 0 42px}
+    .footer-bar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--line);color:var(--muted)}
+    .footer-socials a{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:#fff;color:#090909;border:1px solid var(--line);box-shadow:var(--shadow)}
+    .floating-wa{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#090909;box-shadow:0 18px 30px rgba(0,0,0,.35);font-size:1.5rem}
+    .floating-call{position:fixed;left:18px;bottom:18px;display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:999px;background:#fff;color:#090909;font-weight:800;box-shadow:0 18px 30px rgba(0,0,0,.35);z-index:45}
+    @media (max-width:980px){.hero-grid,.services,.packages,.pricing,.equipment,.benefits,.steps,.contact-grid,.difference-grid{grid-template-columns:1fr}}
+      @media (max-width:820px){.menu-btn{display:inline-flex}nav{position:absolute;top:84px;left:0;right:0;padding:0 16px 16px;display:none}nav.open{display:block}nav ul{flex-direction:column;align-items:stretch;gap:0;background:rgba(18,18,18,.98);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}nav li+li{border-top:1px solid var(--line)}nav a,.nav-cta{display:block;padding:16px 18px}.nav-cta{border-radius:0}nav .submenu{position:static;display:flex;min-width:0;border:0;border-top:1px solid var(--line);border-radius:0;box-shadow:none}nav .submenu a{padding:12px 28px;background:transparent}.hero-points,.stats,.field-row{grid-template-columns:1fr}.brand-logo{width:76px;height:76px;padding:8px;border-radius:18px}.estimate-list li{flex-direction:column;gap:6px}.slide{padding:24px}.floating-call{left:14px;bottom:90px}}
+    @media (max-width:560px){.container{width:min(var(--max),calc(100% - 20px))}.nav-wrap{min-height:74px;gap:10px}.brand{gap:10px}.brand-logo{width:62px;height:62px;padding:7px;border-radius:14px}.brand-copy strong{font-size:.92rem}.brand-copy span{font-size:.72rem}nav{top:74px;padding:0 10px 12px}.hero-mark{width:88px;height:88px;padding:10px;border-radius:22px}.top-contact{font-size:.8rem;gap:10px;padding:8px 0 10px}}
+    @media (max-width:420px){.brand-copy span{display:none}.brand-copy strong{font-size:.88rem}.brand-logo{width:56px;height:56px;padding:6px;border-radius:12px}.nav-wrap{min-height:68px}nav{top:68px}}
+  </style>
 </head>
 <body>
-<div id="header">
-  <div id="header_container"> <img class="logo" src="images/logo3.png" alt="Logo" />
-    <div id="nav_container">
-      <ul id="nav">
-        <li class="current"><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#my_work">My Work</a></li>
-        <li><a href="#Services">Clients</a></li>
-        <li><a href="#Projects">Projects</a></li>
-        <li><a href="#contacts">Contact Me</a></li>
-      </ul>
-      <!--end nav-->
-      <div id="live_search">
-        <input type="text" id="search" value="Live Search">
-        <div id="next"> </div>
-        <!--end next-->
-      </div>
-      <!--end live_search-->
-    </div>
-    <!--end nav_container-->
-    
-    <div id="social_container">
-      <div class="social_holder">
-        <ul id="social_icons">
-<li><a href="https://www.facebook.com/fahimnoorb"><img src="images/icons/icon/f.png" alt="" width="35" height="35" /></a></li>
-<li><a href="https://www.youtube.com/user/fahimnoor85/videos"><img src="images/icons/icon/124015.png" alt="" width="35" height="35" /></a></li>
-<li><a href="https://pk.linkedin.com/in/fahimnoorbhatti"><img src="images/icons/icon/124011.png" alt="" width="35" height="35" /></a></li>
-<li><a href="https://twitter.com/#!/fahimnoorbha"><img src="images/icons/icon/124021.png" alt="" width="35" height="35" /></a></li>
-<li><a href="https://www.behance.net/fahimnoorbhatti1"><img src="images/icons/icon/124035.png" alt="" width="35" height="35" /></a></li>
-<li><a href="https://www.pinterest.com/fahim_bhatti/portfolio/"><img src="images/icons/icon/124039.png" alt="" width="35" height="35" /></a></li>
-<li><a href="https://www.instagram.com/fahimnoorb/"><img src="images/icons/icon/124032.png" alt="" width="35" height="35" /></a></li>
-<li><a href="https://sketchfab.com/search?q=fahimnoor&sort_by=-pertinence&type=models"><img src="images/icons/icon/sketchfeb.png" alt="" width="36" height="35" /></a></li>
-<li><a href="https://vimeo.com/user14734855/videos"><img src="images/icons/icon/124036.png" alt="" width="35" height="35" /></a></li>
-<li><a href="http://r53.deviantart.com/gallery/"><img src="images/icons/icon/124018.png" alt="" width="35" height="35" /></a></li>
-<li><a href="https://dribbble.com/fahimnoorb"><img src="images/icons/icon/124037.png" alt="" width="35" height="35" /></a></li>
-<li><a href="https://www.coroflot.com/fahimnoorbhatti"><img src="images/icons/icon/0.png" alt="" width="36" height="35" /></a></li>
-<li><a href="skype:fahimnoorb?add"><img src="images/icons/icon/124038.png" alt="" width="35" height="35" /></a></li>
-              
+  <header>
+    <div class="container nav-wrap">
+        <a class="brand" href="./index.html" aria-label="FNB home">
+        <div class="brand-logo" aria-hidden="true">FNB</div>
+        <div class="brand-copy">
+            <strong>FNB Freelancer Multimedia consultant</strong>
+            <span>in Karachi +923003732537</span>
+        </div>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false" aria-controls="siteNav"><i class="fa-solid fa-bars"></i></button>
+      <nav id="siteNav">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+            <li class="has-dropdown"><a href="./services.html">Services</a><ul class="submenu"><li><a href="./services.html#design">Design</a></li><li><a href="./services.html#cleaning">Cleaning</a></li><li><a href="./services.html#health">Health</a></li><li><a href="./services.html#car">Car</a></li><li><a href="./services.html#tax">Tax</a></li><li><a href="./services.html#teacher">Teacher</a></li><li><a href="./services.html#maintenance">Maintenance</a></li></ul></li>
+            <li class="has-dropdown"><a href="./offers.html">Offers</a><ul class="submenu"><li><a href="./offers.html#digital-offers">Digital</a></li><li><a href="./offers.html#cleaning-offers">Cleaning</a></li><li><a href="./offers.html#maintenance-offers">Maintenance</a></li><li><a href="./offers.html#business-offers">Business</a></li></ul></li>
+          <li class="has-dropdown"><a href="./pricing.html">Pricing</a><ul class="submenu"><li><a href="./pricing-solar-cleaning.html">Solar Cleaning</a></li><li><a href="./pricing-coloring.html">Coloring</a></li><li><a href="./pricing-website-designing.html">Website Designing</a></li><li><a href="./pricing-warehouse-solutions.html">Warehouse Solution</a></li></ul></li>
+          <li><a href="./experiance.html">Experiance</a></li>
+          <li><a href="./social.html">Social</a></li>
+          <li><a href="./contact.html">Contact</a></li>
         </ul>
-        <!--end social_icons-->
-        <div class="opacity"> </div>
-        <!--end opacity-->
+      </nav>
+    </div>
+      <div class="container top-contact"><span>+923003732537</span><span>|</span><span><a href="mailto:fahimnoor85@gmail.com">fahimnoor85@gmail.com</a></span></div>
+    </header>
+  <main>
+    <section class="slider-strip" aria-label="Service highlights">
+      <div class="container">
+        <div class="slider-shell">
+          <div class="slider-track" id="sliderTrack">
+            <article class="slide active" style="background-image:linear-gradient(160deg,rgba(0,0,0,.48),rgba(32,32,32,.58)),url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80');">
+              <div class="slide-content">
+                <div class="eyebrow"><i class="fa-solid fa-solar-panel"></i> Solar Services</div>
+                <h2>Solar panel cleaning and installation service for homes and businesses.</h2>
+                <p>Support for solar panel cleaning, installation coordination, and earthing boring services.</p>
+              </div>
+            </article>
+            <article class="slide" style="background-image:linear-gradient(160deg,rgba(18,18,18,.42),rgba(32,32,32,.58)),url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80');">
+              <div class="slide-content">
+                <div class="eyebrow"><i class="fa-solid fa-laptop-code"></i> Digital Solutions</div>
+                <h2>Digital solutions including IT, CCTV, graphic designing, websites, and promotional video editing.</h2>
+                <p>Professional support for software, design, security systems, websites, and business promotion content.</p>
+              </div>
+            </article>
+            <article class="slide" style="background-image:linear-gradient(160deg,rgba(14,14,14,.44),rgba(34,34,34,.60)),url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1600&q=80');">
+              <div class="slide-content">
+                <div class="eyebrow"><i class="fa-solid fa-house-circle-check"></i> Home Maintenance</div>
+                <h2>Home maintenance support including plumbing, electrician work, and coloring services.</h2>
+                <p>Useful maintenance help for homes, offices, and business spaces that need practical local support.</p>
+              </div>
+            </article>
+            <article class="slide" style="background-image:linear-gradient(160deg,rgba(16,16,16,.42),rgba(36,36,36,.60)),url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80');">
+              <div class="slide-content">
+                <div class="eyebrow"><i class="fa-solid fa-warehouse"></i> Warehouse Solutions</div>
+                <h2>Warehouse storage solutions and industrial automation for organized business operations.</h2>
+                <p>Support for storage planning, racking systems, workflow improvement, and industrial setup needs.</p>
+              </div>
+            </article>
+            <article class="slide" style="background-image:linear-gradient(160deg,rgba(12,12,12,.44),rgba(40,40,40,.62)),url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80');">
+              <div class="slide-content">
+                <div class="eyebrow"><i class="fa-solid fa-file-invoice-dollar"></i> Tax Prep and Resume</div>
+                <h2>Tax prep services and resume or portfolio help for clients and job interviews.</h2>
+                <p>Business support through your team for tax work, plus resume and portfolio preparation for opportunities.</p>
+              </div>
+            </article>
+            <article class="slide" style="background-image:linear-gradient(160deg,rgba(14,14,14,.40),rgba(38,38,38,.62)),url('https://images.unsplash.com/photo-1519010470956-6d877008eaa4?auto=format&fit=crop&w=1600&q=80');">
+              <div class="slide-content">
+                <div class="eyebrow"><i class="fa-solid fa-truck-fast"></i> Delivery</div>
+                <h2>Delivery support for medicines, books, accessories, and urgent local needs.</h2>
+                <p>Simple and practical delivery help for nearby clients who need fast and reliable local assistance.</p>
+              </div>
+            </article>
+            <article class="slide" style="background-image:linear-gradient(160deg,rgba(12,12,12,.42),rgba(36,36,36,.62)),url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80');">
+              <div class="slide-content">
+                <div class="eyebrow"><i class="fa-solid fa-industry"></i> SS Steel Fabrication</div>
+                <h2>Fabrication support for SS steel items, office furniture, and practical workshop jobs.</h2>
+                <p>Useful fabrication work for stainless steel items, office furniture setups, and custom business or site requirements.</p>
+              </div>
+            </article>
+          </div>
+          <div class="slider-dots" aria-label="Slider navigation">
+            <button class="active" type="button" data-slide="0" aria-label="Show slide 1"></button>
+            <button type="button" data-slide="1" aria-label="Show slide 2"></button>
+            <button type="button" data-slide="2" aria-label="Show slide 3"></button>
+            <button type="button" data-slide="3" aria-label="Show slide 4"></button>
+            <button type="button" data-slide="4" aria-label="Show slide 5"></button>
+            <button type="button" data-slide="5" aria-label="Show slide 6"></button>
+            <button type="button" data-slide="6" aria-label="Show slide 7"></button>
+          </div>
+        </div>
       </div>
-      <!--end social_holder-->
-    </div>
-    <!--end social_container-->
-  </div>
-  <!--end header_container-->
-  <div id="apDiv1">
-    <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.facebook.com/pages/Fahim/191650667547384"
-        scrolling="no" frameborder="0"
-        style="border:none; width:450px; height:80px"></iframe>
-  </div>
-</div>
-<!--end header-->
-<div id="footer">
-  <div id="footer_container">
-    <p>&copy;2012-2020 FAHIM NOOR BHATTI. All rights reserved.</p>
-    <div class="footer_arrow">
-      <div class="arrow_container"> </div>
-      <!--end arrow_container-->
-    </div>
-    <!--end footer_arrow-->
-  </div>
-  <!--end footer_container-->
-</div>
-<!--end footer-->
-<div id="main">
-  <div id="home" class="section" data-key="H">
-    <div class="banner_bg">
-		<div class="gradient_left"></div>
-		<div class="gradient_right"></div>
-	</div>
-	<!--end banner_bg-->
-	
-	<div class="glow">
-	<div class="on_glow"></div>
-	</div>
-		<div id="slider-wrapper">
-        
-		  <div class="nivoSlider">
-           <img src="img/large/slider/fnb.jpg" alt="" title="logo Media Wall" />
-           <img src="img/large/slider/logos wall.jpg" alt="" title="My Logos Work" />
-           <img src="img/large/slider/Services.jpg" alt="" title="Services" />
-           </div>
-           
-		  <!--end nivoSlider-->
-		  <div id="htmlcaption" class="nivo-html-caption"> <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. </div>
-		  <!--end htmlcaption-->
-		</div>
-		<!--end slider-wrapper-->
+    </section>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><i class="fa-solid fa-sparkles"></i> Multi-service business for local, online, and international clients</div>
+          <h1>A <span>multi-page service business website</span> built around real work and experience.</h1>
+          <p>I am FNB, a multimedia and software specialist. This website now presents my services as a proper business with separate pages for services and projects, serving local, online, and international clients through digital work, software development, warehouse storage solutions, tax prep through my team, online consultancy, online teaching, car sale and purchase help, cleaning services, maintenance support, and delivery help.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#booking"><i class="fa-solid fa-briefcase"></i> Start a Project</a>
+            <a class="btn btn-secondary" href="tel:03003732537"><i class="fa-solid fa-phone"></i> Call 0300-3732537</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/923003732537?text=Assalamualaikum!%20Fahim,%20I%20want%20to%20ask%20about%20your%20services." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+          <div class="hero-points">
+            <div><strong>Local and Online</strong><span>Support for nearby, remote, and international clients</span></div>
+            <div><strong>Multi-Service</strong><span>Digital, software, warehouse, tax, consultancy, teaching, and support work</span></div>
+            <div><strong>Experience Based</strong><span>Built around previous jobs and practical client work</span></div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-visual">
+            <div class="hero-mark" aria-hidden="true">FNB</div>
+            <div class="pill"><i class="fa-solid fa-sun"></i> Flexible personal service support</div>
+            <h2>Your <span>home, business, and brand</span> all need reliable support.</h2>
+            <p>From Adobe work, 3D Max, website and software development to CRM, POS, warehouse racking solutions, tax prep, online doctors consultancy, online teachers, AutoCAD designing, car sale and purchase help, paint services, solar cleaning, and home support, the business is now positioned for a wider client range.</p>
+            <div class="stats">
+              <div class="mini"><strong>Multimedia &amp; Software</strong><span>Adobe, 3D Max, websites, software, CRM, POS</span></div>
+              <div class="mini"><strong>Field &amp; Business Services</strong><span>cleaning, maintenance, warehouse, tax, consultancy</span></div>
+              <div class="mini"><strong>Client Reach</strong><span>local, online, and international inquiries</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="home_type_wrapper">
-      <div class="one_third">
-        <h2>Web Solutions</h2>
-        <p><img src="images/icons/Logo (2).png" width="20" height="20" alt="llo">High quality logo design.</p>
-        <p>Web Design</p>
-        <p>Application Interface Design</p>
+    <section id="packages">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Main Service Offers</h2></div>
+          <p>Your homepage now groups the work into clear categories that match what you actually offer.</p>
+        </div>
+          <div class="packages">
+            <article class="card featured"><div class="package-tag"><i class="fa-solid fa-soap"></i> Cleaning Services</div><h3>Solar Panels and Automobiles</h3><ul class="list"><li><i class="fa-solid fa-circle-check"></i><span>Solar panel cleaning support</span></li><li><i class="fa-solid fa-circle-check"></i><span>Earthing boring for solar system services</span></li><li><i class="fa-solid fa-circle-check"></i><span>Automobile cleaning services</span></li></ul></article>
+            <article class="card"><div class="package-tag"><i class="fa-solid fa-pen-nib"></i> Multimedia &amp; Software</div><h3>Adobe, 3D Max, Website, Software</h3><ul class="list"><li><i class="fa-solid fa-circle-check"></i><span>Multimedia work using Adobe tools, 3D Max, and AutoCAD designing</span></li><li><i class="fa-solid fa-circle-check"></i><span>Website development and software development</span></li><li><i class="fa-solid fa-circle-check"></i><span>Digital marketing, CRM, POS, Sale Bartender, Busy software, and video content</span></li></ul></article>
+            <article class="card"><div class="package-tag"><i class="fa-solid fa-screwdriver-wrench"></i> Home Maintenance</div><h3>Plumbing, Electric, MS Structure, Paint</h3><ul class="list"><li><i class="fa-solid fa-circle-check"></i><span>Kitchen and washroom tap changing</span></li><li><i class="fa-solid fa-circle-check"></i><span>Switch board and basic electrical help</span></li><li><i class="fa-solid fa-circle-check"></i><span>Water filter installation and light RO plant service</span></li><li><i class="fa-solid fa-circle-check"></i><span>High quality MS structure including walk way</span></li><li><i class="fa-solid fa-circle-check"></i><span>Red oxide and epoxy paint support</span></li><li><i class="fa-solid fa-circle-check"></i><span>Coloring and paint services for homes and offices</span></li></ul></article>
+          <article class="card"><div class="package-tag"><i class="fa-solid fa-truck-fast"></i> Business and Support</div><h3>Warehouse, Tax Prep, Consultancy, Delivery</h3><ul class="list"><li><i class="fa-solid fa-circle-check"></i><span>Warehouse storage solutions and different racking systems</span></li><li><i class="fa-solid fa-circle-check"></i><span>Tax prep services offered through my team</span></li><li><i class="fa-solid fa-circle-check"></i><span>Resume and portfolio help for interviews, car sale and purchase help</span></li><li><i class="fa-solid fa-circle-check"></i><span>Online doctors consultancy, online teachers, and local delivery support</span></li></ul></article>
+        </div>
       </div>
-      <!--end one_third-->
-      <div class="one_third">
-        <h2>3D Modelling</h2>
-        <p>High quality 3D models</p>
-        <p>3D Animation</p>
-        <p>Techincal Walk Through</p>
-      </div>
-      <!--end one_third-->
-      <div class="one_third_last">
-        <h2>Graphic design</h2>
-        <p>High quality Graphic Design.	</p>
-        <p>Corporate Identity Design</p>
-        <p>Corporate Branding</p>
-      </div>
-      <!--end one_third_last-->
-    </div>
-    <!--end home_type_wrapper-->
-	<hr class="hr_down"/>
-	<div class="welcome_box">
-	  <p>Hello I am Fahim. Welcome to my portfolio!</p>
-   <p>Above are some of the services I provide, enquiries are welcome. Feel free to check out my 
-   <a class="inline_navigation" href="#my_work">work</a>, 
-   <a class="inline_navigation" href="#my_work">work</a>
-   
-   <a class="inline_navigation" href="#about">my skills</a> or <a class="inline_navigation" href="#Services">Services</a>   <a class="inline_navigation" href="#contacts">contact me</a> right away.</p>
-    </div>
-	<!--end welcome_box-->
-	<hr class="hr_up"/>
-  </div>
-  <!--end home-->
-  <div id="about" class="section"  data-key="A">
-    <div class="heading">
-      <div class="heading_cont">
-		<a href="#home" class="go_up"></a>
-        <h1>About Me</h1>
-        <span class="heading_bg"></span>
-        <!--end heading_bg-->
-      </div>
-      <!--end heading_cont-->
-    </div>
-    <!--end heading-->
-    <div class="sidebar_left">
-      <div class="one_fourth">
-        <h2>My Skills</h2>
-        <ul class="skills">
-          <li>
-            <h5>Branding,Poster, Catalouge,Banner</h5>
-            <span class="skill_bg"> <span class="skill_bar" style="width: 95%;"></span> </span> </li><li>
-            <h5>3D Animation and Modeling </h5>
-            <span class="skill_bg"> <span class="skill_bar" style="width: 85%;"></span> </span> </li><li>
-            <h5>Product Presentation, Mockup design</h5>
-            <span class="skill_bg"> <span class="skill_bar" style="width: 90%;"></span> </span> </li><li>
-            <h5>Design for E-Commerce</h5><span class="skill_bg"> <span class="skill_bar" style="width: 75%;"></span> </span> </li><li>
-            <h5>Design for Direct Sales</h5><span class="skill_bg"> <span class="skill_bar" style="width: 40%;"></span> </span> </li><li>
-          	<h5>Mechanical Illustration </h5><span class="skill_bg"> <span class="skill_bar" style="width: 30%;"></span> </span> </li>
-          <li>
-            <h5>Pre Visualization</h5>
-          <span class="skill_bg"> <span class="skill_bar" style="width: 60%;"></span> </span> </li><li>
-          	<h5>Logo / Web  Desiging</h5><span class="skill_bg"> <span class="skill_bar" style="width: 50%;"></span> </span> </li></ul>
-            <h5>Information Technology </h5>
-            <span class="skill_bg"> <span class="skill_bar" style="width: 50%;"></span> </span> </li></ul>
-        <!--end skills-->
-      </div>
-      <!--end one_fourth-->
-      <div class="one_fourth">
-        <h2></h2>
-        <div id=""> </div>
-        <!--end twitter_update_list-->
-      </div>
-      <!--end one_fourth-->
-    </div>
-    <!--end sidebar_left-->
-    <div class="content_right">
-      <div class="one_fourth">
-        <div class="shadow"> <a class="zoom" href="images/avatar.jpg" title="Profile Picture"> <img src="images/avatarthumb.jpeg" alt="Profile Picture" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-      </div>
-      <!--end one_fourth-->
-      <div class="one_half_last">
-        <h2>Few words about me</h2>
-        <p>My name is FAHIM NOOR BHATTI. I'm a 36 year old 3D &amp; 2D Artist from Karachi, Pakistan .I love all things technology, and always try to keep up with the latest gadgets. My other hobbies include: photography, gaming, sketching, reading, going to seaview,. Music is a huge part of my life, and I listen to a variety of different styles. </p>
-      </div>
-      <!--end one_half_last-->
-      <div class="full_width">
-        <h2>What I do</h2>
-        <p>I studied Computer Animation for three years at the Arena Multimedia  <img src="images/icons/Autodesk_3DS_professional_NV.png" width="25" height="25"> <img src="images/icons/82303c61-6102-11e2-9a53-12313b016471.602a34ee-3788-410d-8a5c-b112d47956b7.png" width="120" height="32">and I'm currently working with automation company  . I am currently available for freelance work and you can check out my previous work <a class="inline_navigation" href="#my_work">here</a>.</p>
-        <br/>
-        <p>I have had an interest in animation ever since seeing Animated movies for the first time as a child. I'm highly self-motivated, and am constantly working on new ideas. My strengths are in 3D Visualization, and I love working on interior designs in particular. I have a true passion for what <br>I do and I'm always trying to challenge myself.</p>
-        <br/>
-        <p>I love to create high quality stills and enjoy the challenge of making them as realistic as possible. Throughout university we learned 3d MAx and used Photoshop for compositing. However since leaving, I have taught myself many more 3D programs, listed to the left. I mainly use <img src="images/icons/3ds-max-icon-vector-logo-2.png" width="24" height="24"><img src="images/icons/37542893-13732d8a-2936-11e8-9dba-0f618abe8331.png" width="24" height="24"> <img src="images/icons/1200px-Adobe_Illustrator_CC_icon.svg.png" width="24" height="24"><img src="images/icons/photoshop-icon.png" width="24" height="24"> <img src="images/icons/Adobe_Premiere_Pro_CC_icon.svg.png" width="24" height="24"> to create my work. I am a fast learner and enjoy the challenge of learning something new. As well as providing 3D services, I am also able to do sketches, concept art, storyboards, visual effects and compositing. Feel free to <a class="inline_navigation" href="#contacts">contact me</a> regarding any of the services I offer. </p>
-      </div>
-      <!--end full_width-->
-    </div>
-    <!--end content_right-->
-  </div>
-  <!--end about-->
-  <div id="my_work" class="section"  data-key="W">
-    <div class="heading">
-      <div class="heading_cont">
-		<a href="#home" class="go_up"></a>
-        <h1>My Work</h1>
-        <span class="heading_bg"> </span>
-        <!--end heading_bg-->
-      </div>
-      <!--end heading_cont-->
-    </div>
-    <!--end heading-->
-    <div class="filter_container">
-      <h2>Filter by:</h2>
-      <ul id="filter">
-        <li class="filter_current"><a href="#all">All</a></li>
-        <li><a href="#anim">Graphics</a></li>
-        <li><a href="#int">logo</a></li>
-        <li><a href="#mod">3d Models/Animations</a></li>
-        <li><a href="#env">Websites</a></li>
-        <li><a href="#Flash">Flash</a></li>
-        <li><a href="#Events">Events</a></li>
-        <li><a href="#Adcampaign">Ad campaign</a></li>
-        <li><a href="#Exhibitions">Exhibitions</a></li>
-        <li><a href="#Documentry">Documentry</a></li>
-        <li><a href="#Workfor">Work for</a></li>
-        
+    </section>
 
+    <section id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Client Reach and Experience</h2></div>
+          <p>This section now explains who you serve and how your previous work experience supports the business.</p>
+        </div>
+        <div class="pricing">
+          <article class="card"><div class="pill"><i class="fa-solid fa-earth-asia"></i> Client Reach</div><h3>Local, Online, International</h3><div class="price">Wide</div><p>This business is now positioned for nearby clients, remote online work, and international digital service inquiries.</p></article>
+          <article class="card price-featured"><div class="pill"><i class="fa-solid fa-briefcase"></i> Previous Jobs</div><h3>Experience-Based Positioning</h3><div class="price">Real</div><p>The site messaging now supports a business story built on previous jobs, practical work, and multi-category service experience.</p></article>
+          <article class="card"><div class="pill"><i class="fa-solid fa-sitemap"></i> Multi-Page Site</div><h3>Separate Services and Projects</h3><ul class="estimate-list"><li><span>Home page</span><span>Positioning</span></li><li><span>Services page</span><span>Dedicated</span></li><li><span>Projects page</span><span>Separate</span></li></ul></article>
+        </div>
+      </div>
+    </section>
 
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Service Categories</h2></div>
+          <p>These three categories make the service list easier to understand at a glance.</p>
+        </div>
+        <div class="services">
+          <article class="card"><div class="icon"><i class="fa-solid fa-laptop-code"></i></div><h3>Multimedia and Software</h3><p>Adobe work, 3D Max, AutoCAD designing, graphic designing, branding, digital marketing, website development, software development, CRM, POS, Sale Bartender, Busy software, and video editing.</p></article>
+          <article class="card"><div class="icon"><i class="fa-solid fa-spray-can-sparkles"></i></div><h3>Cleaning and Solar Services</h3><p>Solar panel cleaning, earthing boring for solar systems, and automobile cleaning for clients who want practical and direct service.</p></article>
+          <article class="card"><div class="icon"><i class="fa-solid fa-house-circle-check"></i></div><h3>Business, Consultancy, and Delivery</h3><p>Warehouse storage and racking solutions, tax prep through your team, online doctors consultancy, online teachers, car sale and purchase help, resume or portfolio help, and local deliveries.</p></article>
+        </div>
+      </div>
+    </section>
 
+    <section id="equipment">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Availability &amp; Approach</h2></div>
+          <p>Use this area to explain how you work and how clients can get started.</p>
+        </div>
+        <div class="equipment">
+          <article class="card"><div class="icon"><i class="fa-solid fa-comments"></i></div><h3>Clear Communication</h3><ul class="list"><li><i class="fa-solid fa-circle-check"></i><span>Phone, WhatsApp, and email</span></li><li><i class="fa-solid fa-circle-check"></i><span>Simple next-step replies</span></li><li><i class="fa-solid fa-circle-check"></i><span>Direct person-to-person contact</span></li></ul></article>
+          <article class="card"><div class="icon"><i class="fa-solid fa-list-check"></i></div><h3>Wide Practical Coverage</h3><ul class="list"><li><i class="fa-solid fa-circle-check"></i><span>Digital work and editing support</span></li><li><i class="fa-solid fa-circle-check"></i><span>Cleaning and maintenance help</span></li><li><i class="fa-solid fa-circle-check"></i><span>Small local delivery assistance</span></li></ul></article>
+          <article class="card availability"><div class="icon"><i class="fa-solid fa-clock"></i></div><h3>Availability</h3><div class="availability-time">24/7</div><p>Available for inquiries every day and any time</p></article>
+        </div>
+      </div>
+    </section>
 
+    <section id="benefits">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Benefits of This Service Website</h2></div>
+          <p>A clearer website helps visitors trust you faster and understand your wider service range faster.</p>
+        </div>
+        <div class="benefits">
+          <article class="card"><div class="icon"><i class="fa-solid fa-bolt"></i></div><h3>Faster Trust</h3><p>People understand who you are and what you do much sooner.</p></article>
+          <article class="card"><div class="icon"><i class="fa-solid fa-coins"></i></div><h3>Better Leads</h3><p>Visitors have clearer contact options and stronger reasons to message you.</p></article>
+          <article class="card"><div class="icon"><i class="fa-solid fa-shield-heart"></i></div><h3>More Useful Range</h3><p>The site now shows that you can help in more than one practical area.</p></article>
+          <article class="card"><div class="icon"><i class="fa-solid fa-sun-plant-wilt"></i></div><h3>Cleaner Presentation</h3><p>The service list feels more complete, intentional, and locally relevant.</p></article>
+        </div>
+      </div>
+    </section>
 
-      </ul>
-      <!--end filter-->
-    </div>
-    <!--end filter_container-->
-    <ul class="projects" id="image-grid">
-    
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/Graphicsl.jpeg" title="0"> 
-        	<img src="portfolio/graphics/T1.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Press Add</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>Tool = Photoshot and Illustrator .</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>This is print in Down News Paper</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
+    <section id="process">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>How Working Together Starts</h2></div>
+          <p>A short process makes it easier for people to reach out with confidence.</p>
         </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="mod">
-        <div class="shadow"><a href="https://www.youtube.com/watch?v=07wE4f2XMR8"><img src="portfolio/3D/3d1.jpg" alt="Portfolio Image"/></a></div>
-        <!--end shadow-->
-        <h3>3d Warehouse showreel</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more2"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more2">
-            <h2>3d Warehouse showreel</h2>
-            <div class="full_width">
-              <p>Alhamd container, tcs logistic, high q pharma, nestle, unilever, soorty enterprices, feroze textile, continental chemical, man o salwa, pharmatec, gum corporation, platinum pharma, healthteck, food pack, dadex, bms pharma, tapal, agility logistic, orient, seel more , sehzoolab, akson pharma, caylex pharma, medina pharma, national foods, indus dying , burma oil, swiss specility, friendshi textile, millat tractor, pepsi int lahore, coca cola islamabad, habiboilmills, sana industries, mactor pharma, ici pakistan, total lubricants, zafa, raziq international, mobile askari, amron pharma, ypuns and associates, cadbury pakistan, shafi resco, mef careefour, engro food, futhy chemicals, pcp chemicals, coco cola .</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
+        <div class="steps">
+          <article class="card"><h3>1. Share your need</h3><p>Tell me what kind of service you want and the basic details.</p></article>
+          <article class="card"><h3>2. Get a clear reply</h3><p>I respond with the next step and what information is needed.</p></article>
+          <article class="card"><h3>3. Start the work</h3><p>We move forward with the agreed service or website task.</p></article>
+          <article class="card"><h3>4. Grow over time</h3><p>You can come back later for more updates, examples, or support.</p></article>
         </div>
-        <!--end display:none-->
-      </li>
-      
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/billboard.jpg" title="0"> 
-        	<img src="portfolio/graphics/Tbillboard.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>billboard Design</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-<li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/FAHIM_NOOR_by_r53.jpg" title="0"> 
-   	  <img src="portfolio/graphics/p7t.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>teaser</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-        <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/1551537_827091494019548_2001871236497839841_n.jpg" title="0"> 
-   	  <img src="portfolio/graphics/1551537_827091494019548_2001871236497839841_n.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Project Design</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-        
-<li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/p3.jpg" title="0"> 
-   	  <img src="portfolio/graphics/p3t.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>poster for book</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-</li>
-<li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/p1.jpg" title="0"> 
-        	<img src="portfolio/graphics/p1t.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>CD Cover</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/KEL.jpg" title="0"> 
-        	<img src="portfolio/graphics/KET.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>KESC Flyer</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/Trifold4-2-2015_02.jpg" title="0"> 
-        	<img src="portfolio/graphics/Trifold4-2-2015_01.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Tri Folder Compnay profile</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li><li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/81P0C-C1WVL.jpg" title="0"> 
-        	<img src="portfolio/graphics/smartmockups_k9b1z4hc.png" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>CD Cover for boom boom afridi</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li><li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/IMG_20200531_002038_1.jpg" title="0"> 
-        	<img src="portfolio/graphics/smartmockups_k9b20nmm.png" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>MAGAZINE for rizwanmoazzam</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li><li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/p5.jpg" title="0"> 
-        	<img src="portfolio/graphics/p5t.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>stationery for Htech solutions</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/smartmockups_kbke9kif.jpg" title="0"> 
-        	<img src="portfolio/graphics/smartmockups_kbke9kif.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Albuquerquewestproperties</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/Global Strategy Interface 30.png" title="0"> 
-        	<img src="portfolio/graphics/Global Strategy Interface 30.png" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>stationery for Htech solutions</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/Towes Stationary 1 23.png" title="0"> 
-        	<img src="portfolio/graphics/Towes Stationary 1 23.png" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>stationery for Htech solutions</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/Steven Truong 8.jpg" title="0"> 
-        	<img src="portfolio/graphics/Steven Truong 8.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>stationery for Htech solutions</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/stationery Questus Energy.png" title="0"> 
-        	<img src="portfolio/graphics/stationery Questus Energy.png" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>stationery for Htech solutions</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/One Stop Law stationary 5 red  28.png" title="0"> 
-        	<img src="portfolio/graphics/One Stop Law stationary 5 red  28.png" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>stationery for Htech solutions</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="Adcampaign">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/p6.jpg" title="0"> 
-        	<img src="portfolio/graphics/p6t.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>ad campaign </h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>for libertybooks</h2>
-              <p>for libertybooks</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>1</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      
-      
+      </div>
+    </section>
 
-      
-      
-      
-      
-      
-      
-      
-      
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/shan card for print.pdf.png" title="0"> 
-        	<img src="portfolio/graphics/shan card for print.pdf.png" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Visiting Card</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
+    <section id="contact">
+      <div class="container contact-grid">
+        <article class="card availability contact-card">
+          <div class="pill"><i class="fa-solid fa-phone-volume"></i> Contact Details.</div>
+          <h2>Ready to talk about your project or service need?</h2>
+          <div class="contact-list">
+            <div class="contact-item"><strong>Phone</strong><p><a href="tel:03003732537">0300-3732537</a></p></div>
+            <div class="contact-item"><strong>WhatsApp</strong><p><a href="https://wa.me/923003732537?text=Assalamualaikum!%20Fahim,%20I%20want%20to%20ask%20about%20your%20services." target="_blank" rel="noopener">Start chat now</a></p></div>
+              <div class="contact-item"><strong>Email</strong><p><a href="mailto:fahimnoor85@gmail.com">fahimnoor85@gmail.com</a></p></div>
+            <div class="contact-item"><strong>Coverage</strong><p>Karachi for digital work, cleaning services, home maintenance help, and local delivery support</p></div>
           </div>
-          <!--end read_more_wrap-->
-        </div><li data-category="Adcampaign">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/10 x 20 new mail (1).jpg" title="0"> 
-        	<img src="portfolio/graphics/10 x 20 new mail (1).jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>billboard</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
+          <div class="contact-actions">
+            <a class="btn btn-whatsapp" href="https://wa.me/923003732537?text=Assalamualaikum!%20Fahim,%20I%20would%20like%20to%20discuss%20your%20services." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Get Quote</a>
+            <a class="btn btn-secondary" style="color:#000;font-weight:800" href="tel:03003732537"><i class="fa-solid fa-phone"></i> Call Now</a>
           </div>
-          <!--end read_more_wrap-->
-        </div>
-        <li data-category="Exhibitions">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/32_ copy.jpg" title="0"> 
-        	<img src="portfolio/graphics/32_ copy.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Bonanza</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <li data-category="Exhibitions">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/Exhibitions/100_0252.jpg" title="0"> 
-        	<img src="portfolio/Exhibitions/100_0252.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Books Events</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div><li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/bonanza front side.jpg" title="0"> 
-        	<img src="portfolio/graphics/bonanza front side.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Invitation card for Bonanza</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li><li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/photoguide app 114 px 02.png" title="0"> 
-        	<img src="portfolio/graphics/photoguide app 114 px 02.png" alt="Portfolio Image" width="114" height="114"/> </a> </div>
-        <!--end shadow-->
-        <h3>Iphone App Icon</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li><li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/stationary582013.jpg" title="0"> 
-        	<img src="portfolio/graphics/stationary582013.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>stationery for RM</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/smartmockups_kbke388y.jpg" title="0"> 
-        	<img src="portfolio/graphics/smartmockups_kbke388y.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Splash screen for Application</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>Character animation, lighting and rendering was created using Lightwave 3D. The camera advert was textured, lit and rendered in Lightwave 3D, and compositing was completed using Adobe After Effect          </p>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/06.jpg" title="0"> 
-       	<img src="portfolio/graphics/06.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>fire ICON DEsIGN </h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-</li>
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/love.jpg" title="0"> 
-        	<img src="portfolio/graphics/love1.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>abstract art</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="one_half_last">            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-<!--end display:none--></li>
-      
-      
-<li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/shoping bag02.jpg" title="0"> 
-        	<img src="portfolio/graphics/shoping bag02.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Rd Bag</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>Press Add For Era Automation 2nd branch</h2>
-              <p>This video is a collection of all of my best CG work that I have completed to date. I regularly keep this up to date, adding new work when completed.</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3D interiors, texturing, lighting, and rendering was completed in Autodesk Maya and mental ray. All 3D exterior environments were created using e-on Vue. The sports car was textured, lit and rendered using Autodesk Maya, and mental ray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      
-       
-<li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/smartmockups_k9b24i7z.png" title="0"> 
-        	<img src="portfolio/graphics/T2.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Happy mothers day</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more1"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more1">
-            <div class="full_width">
-              <h2>1</h2>
-              <p>2</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>3</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>#Fahimnoorb</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="mod">
-        <div class="shadow"><a href="https://www.youtube.com/watch?v=XNjQphVQ5gM"><img src="portfolio/3D/3d03.jpg" alt="Portfolio Image"/></a></div>
-        <!--end shadow-->
-        <h3>era automation ware house dexion</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more2"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more2">
-            <h2>3d Warehouse showreel</h2>
-            <div class="full_width">
-              <p>Alhamd container, tcs logistic, high q pharma, nestle, unilever, soorty enterprices, feroze textile, continental chemical, man o salwa, pharmatec, gum corporation, platinum pharma, healthteck, food pack, dadex, bms pharma, tapal, agility logistic, orient, seel more , sehzoolab, akson pharma, caylex pharma, medina pharma, national foods, indus dying , burma oil, swiss specility, friendshi textile, millat tractor, pepsi int lahore, coca cola islamabad, habiboilmills, sana industries, mactor pharma, ici pakistan, total lubricants, zafa, raziq international, mobile askari, amron pharma, ypuns and associates, cadbury pakistan, shafi resco, mef careefour, engro food, futhy chemicals, pcp chemicals, coco cola .</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-<li data-category="mod">
-        <div class="shadow"><a href="https://www.youtube.com/embed/56bncGl__GI"><a href="https://www.youtube.com/embed/56bncGl__GI"><img src="portfolio/3D/3d2.jpg" alt="Portfolio Image"/></a></div>
-        <!--end shadow-->
-        <h3>BULLET PROOF WINDOW FILM FOR BANK SECURITY</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more2"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more2">
-            <h2>3d Warehouse showreel</h2>
-            <div class="full_width">
-              <p>123.</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="mod">
-        <div class="shadow"><a href="https://www.youtube.com/watch?v=4XEeIt46KkI"><img src="portfolio/3D/3d7.jpg" alt="Portfolio Image"/></a></div>
-        <!--end shadow-->
-        <h3>PORD GRAND</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more2"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more2">
-            <h2>3d Warehouse showreel</h2>
-            <div class="full_width">
-              <p>123.</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-        <div class="read_more_wrap" id="read_more3">
-        <div class="full_width">
-          <h2>Tobaco</h2>
-          <p>Click here to view big image</p>
-        </div>
-      </li>
-<li data-category="mod">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="img/large/elevator enprovment .jpg" title="3D "> 
-        	<img src="portfolio/3D/3d5.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>For Tobaco Machine Process</h3>
-        <p>Click here to view big image</p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>Protando</h2>
-              <p>Click here to view big image.</p>
-            </div>
-<li data-category="mod">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/3D/234.jpg" title="3D "> 
-        	<img src="portfolio/3D/3d4.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>elevator</h3>
-        <p>Click here to view big image</p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>Bank Security</h2>
-              <p>Click here to view big image</p>
-            </div>
-            
-            <li data-category="mod">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="https://vimeo.com/53737082" title="3D "> 
-        	<img src="portfolio/3D/3d6.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Road Bolcker </h3>
-        <p>Click here to view big image</p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>Security for Port Grand</h2>
-              <p>Click here to view big image</p>
-            </div>
-            <li data-category="mod">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="img/large/3dl.jpg" title="3D "> 
-        	<img src="portfolio/3D/3d6t.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>3d mosque model</h3>
-        <p>Click here to view big image</p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>Warehouse</h2>
-              <p>Click here to view big image</p>
-            </div><li data-category="Events">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/3D/hassan  dun hill 01.jpg" title="3D "> 
-        	<img src="portfolio/3D/hassan  dun hill 01.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>3d stage design</h3>
-        <p>Click here to view big image</p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>Warehouse</h2>
-              <p>Click here to view big image</p>
-            </div><li data-category="mod">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="https://www.youtube.com/embed/kTxaBtwNz6E" title="3D "> 
-        	<iframe width="200" height="150" src="https://www.youtube.com/embed/kTxaBtwNz6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </a> </div>
-        <!--end shadow-->
-        <h3>port grand</h3>
-        <p>Click here to view big image</p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>Warehouse</h2>
-              <p>Click here to view big image</p>
-            </div><li data-category="mod">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/3D/3d4a.jpg" title="3D "> 
-        	<img src="portfolio/3D/3d4t.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>3d control room</h3>
-        <p>Click here to view big image</p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>Warehouse</h2>
-              <p>Click here to view big image</p>
-            </div><li data-category="mod">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/3D/BATTERY ROLLER STAND VIEW .jpg" title="3D "> 
-        	<img src="portfolio/3D/BATTERY ROLLER STAND VIEW .jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>fork lifter</h3>
-        <p>Click here to view big image</p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>Warehouse</h2>
-              <p>Click here to view big image</p>
-            </div><li data-category="Events">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="img/large/3dl.jpg" title="3D "> 
-        	<img src="portfolio/3D/IMG_20200531_002140.jpg" alt="Portfolio Image" width="182" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>3d stall </h3>
-        <p>Click here to view big image</p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-          <li data-category="mod">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/3D/CONVOYER.jpg" title="3D "> 
-       	  <img src="portfolio/3D/CONVOYER.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>convoyer </h3>
-        <p>Click here to view big image</p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-          <div class="full_width">
-            <h2>Warehouse</h2>
-            <p>Click here to view big image</p>
-          </div><li data-category="mod">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/3D/0003.jpg" title="3D "> 
-        	<img src="portfolio/3D/0003.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>rejection system</h3>
-        <p>Click here to view big image</p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>Warehouse</h2>
-              <p>Click here to view big image</p>
-            </div><li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/sticker 08.jpg" title="3D "> 
-        	<img src="portfolio/graphics/sticker 08.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Sticker</h3>
-        <p>Click here to view big image</p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>Sticker</h2>
-              <p>Click here to view big image</p>
-            </div>
-            <li data-category="Flash">
-        	<div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="img/large/3dl.jpg" title="3D "> 
-        	<img src="portfolio/flash/000.jpg" alt="Portfolio Image" width="207" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Exhibitions</h3>
-        <p>Click here to view big image</p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>Warehouse</h2>
-              <p>Click here to view big image</p>
-            </div><li data-category="Adcampaign">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/Exhibitions/IMG_20140902_122849.jpg" title="3D "> 
-        	<img src="portfolio/Exhibitions/IMG_20140902_122844.jpg" alt="Portfolio Image" width="207" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Royal Dhaka</h3>
-        <p>Click here to view big image</p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>Warehouse</h2>
-              <p>Click here to view big image</p>
-            </div>
-<li data-category="mod">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="img/large/3dl.jpg" title="3D "> 
-        	<img src="portfolio/3D/3d8.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>baring</h3>
-        <p>Click here to view big image </p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>Warehouse</h2>
-              <p>Click here to view big image</p>
-            </div>
-            <li data-category="mod">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/3D/04.jpg" title="3D "> 
-        	<img src="portfolio/3D/04.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>turntable conveyor</h3>
-        <p>Click here to view big image </p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>3d Elevator</h2>
-              <p>Click here to view big image</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>The robot was modelled from scratch in Maya and then rendered using Vray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>The breakdown was composited together using After Effects CS4.</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="mod">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="img/large/elevator 3d model.jpg" title="3D "> 
-        	<img src="portfolio/3D/3d seane.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Security</h3>
-        <p>Click here to view big image </p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>3d Elevator</h2>
-              <p>Click here to view big image</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>The robot was modelled from scratch in Maya and then rendered using Vray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>The breakdown was composited together using After Effects CS4.</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="mod">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="img/large/elevator 3d model.jpg" title="3D "> 
-        	<img src="portfolio/3D/3d3.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Warehouse</h3>
-        <p>Click here to view big image </p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>3d Elevator</h2>
-              <p>Click here to view big image</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>The robot was modelled from scratch in Maya and then rendered using Vray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>The breakdown was composited together using After Effects CS4.</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-       <li data-category="mod">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/3D/1.jpg" title="3D "> 
-        	<img src="portfolio/3D/crown.jpg" alt="Portfolio Image" width="195" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>fork lifter</h3>
-        <p>Click here to view big image </p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>3d Elevator</h2>
-              <p>Click here to view big image</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>The robot was modelled from scratch in Maya and then rendered using Vray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>The breakdown was composited together using After Effects CS4.</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li> <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/Planning the milking plant02 pipe.png" title="3D "> 
-        	<img src="portfolio/graphics/Planning the milking plant02 pipe.png" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>2d industrial process illustration</h3>
-        <p>Click here to view big image </p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>3d Elevator</h2>
-              <p>Click here to view big image</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>The robot was modelled from scratch in Maya and then rendered using Vray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>The breakdown was composited together using After Effects CS4.</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li> <li data-category="Events">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/3D/zong venue one more sofa.jpg" title="3D "> 
-        	<img src="portfolio/3D/zong venue one more sofa.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>3d event stage for zong</h3>
-        <p>Click here to view big image </p>
-       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more3">
-            <div class="full_width">
-              <h2>3d Elevator</h2>
-              <p>Click here to view big image</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p>The robot was modelled from scratch in Maya and then rendered using Vray.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p>The breakdown was composited together using After Effects CS4.</p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li> 
-      </li> 
-      
-       
-       
-       
-       
-      </li><li data-category="int">
-        <div class="shadow">
-          <a class="zoom" rel="portfolio" href="portfolio/logo/rize.jpg" title="0"> <img src="portfolio/logo/rize.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>Choix Rize</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more4"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more4">
-            <h2>Logo for freelance work</h2>
-            <div class="full_width">
-              <p>I did not model anything in this scene, I did the lighting and rendering of the scene using vray for Maya.</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="int">
-        <div class="shadow">
-          <a class="zoom" rel="portfolio" href="portfolio/logo/logo (2).jpg" title="0"> <img src="portfolio/logo/logo (2).jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>GO</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more4"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more4">
-            <h2>Logo for freelance work</h2>
-            <div class="full_width">
-              <p>I did not model anything in this scene, I did the lighting and rendering of the scene using vray for Maya.</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="int">
-        <div class="shadow">
-          <a class="zoom" rel="portfolio" href="portfolio/logo/IMG-20190828-WA0026.jpg" title="0"> <img src="portfolio/logo/IMG-20190828-WA0026.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>GO</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more4"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more4">
-            <h2>Logo for freelance work</h2>
-            <div class="full_width">
-              <p>I did not model anything in this scene, I did the lighting and rendering of the scene using vray for Maya.</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li><li data-category="int">
-        <div class="shadow">
-          <a class="zoom" rel="portfolio" href="portfolio/logo/logo (3).jpg" title="0"> <img src="portfolio/logo/logo (3).jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>logo</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more4"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more4">
-            <h2>Logo for freelance work</h2>
-            <div class="full_width">
-              <p>I did not model anything in this scene, I did the lighting and rendering of the scene using vray for Maya.</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li><li data-category="int">
-        <div class="shadow">
-          <a class="zoom" rel="portfolio" href="portfolio/logo/logo (4).jpg" title="0"> <img src="portfolio/logo/logo (4).jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>cream</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more4"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more4">
-            <h2>Logo for freelance work</h2>
-            <div class="full_width">
-              <p>I did not model anything in this scene, I did the lighting and rendering of the scene using vray for Maya.</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li><li data-category="int">
-        <div class="shadow">
-          <a class="zoom" rel="portfolio" href="portfolio/logo/logo (5).jpg" title="0"> <img src="portfolio/logo/logo (5).jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>persian hub</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more4"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more4">
-            <h2>Logo for freelance work</h2>
-            <div class="full_width">
-              <p>I did not model anything in this scene, I did the lighting and rendering of the scene using vray for Maya.</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-       <li data-category="int">
-         <div class="shadow"> 
-           <p><a class="zoom" rel="portfolio" href="portfolio/logo/night1.jpg" title="0"> <img src="portfolio/logo/night1.jpg" alt="Portfolio Image" width="200" height="150"/></a> </p>
-           <h3>firsco</h3>
-           <p>Click here to view big image</p>
-           <a class="zoom" href="#read_more4"><span class="btn">read more</span></a>
-           <p></p>
-         </div>
-       </li>
-       <li data-category="int">
-         <div class="shadow"> 
-           <p><a class="zoom" rel="portfolio" href="portfolio/logo/Tongue groove.PNG" title="0"> <img src="portfolio/logo/Tongue groove.PNG" alt="Portfolio Image" width="200" height="150"/></a> </p>
-           <h3>Tongue groove</h3>
-           <p>Click here to view big image</p>
-           <a class="zoom" href="#read_more4"><span class="btn">read more</span></a>
-           <p></p>
-         </div>
-       </li>
-       <li data-category="int">
-        <div class="shadow">
-          <a class="zoom" rel="portfolio" href="portfolio/logo/finalrender1.jpg" title="0"> <img src="portfolio/logo/finalrender11.jpg" alt="Portfolio Image"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>lux Jet</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more4"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more4">
-            <h2>Logo for freelance work</h2>
-            <div class="full_width">
-              <p>I did not model anything in this scene, I did the lighting and rendering of the scene using vray for Maya.</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="int">
-        <div class="shadow">
-          <a class="zoom" rel="portfolio" href="portfolio/logo/sample01.jpg" title="0"> <img src="portfolio/logo/sample01.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>lux Jet</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more4"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more4">
-            <h2>Logo for freelance work</h2>
-            <div class="full_width">
-              <p>I did not model anything in this scene, I did the lighting and rendering of the scene using vray for Maya.</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-       <li data-category="int">
-         <div class="shadow"> 
-           <p><a class="zoom" rel="portfolio" href="portfolio/3D/10383753_641549175937720_8067161693708627876_o.jpg" title="0"> <img src="portfolio/3D/10383753_641549175937720_8067161693708627876_o.jpg" alt="Portfolio Image" width="200" height="150"/></a> </p>
-           <h3>Autocad Drawing</h3>
-           <p>Click here to view big image</p>
-           <a class="zoom" href="#read_more4"><span class="btn">read more</span></a>
-           <p></p>
-         </div>
-       </li>
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/smartmockups_k9b229qu.png" title="0"> 
-        	<img src="portfolio/graphics/smartmockups_k9b229qu.png" alt="Animation" width="200" height="150"/> </a> 
-         </div>
-        <!--end shadow-->
-        <h3>Visiting card for Siana</h3>
-       <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more5"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more5">
-            <h2>Mothers day card</h2>
-            <div class="full_width">
-              <p>This was created for youtube user: 8Rodimus as an intro for his video game review channel.</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li> <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="img/thumbs/work thumbs/billboard.jpg" title="0"> 
-        	<img src="portfolio/graphics/cinnabon.jpg" alt="Animation" width="200" height="150"/> </a> 
-         </div>
-        <!--end shadow-->
-        <h3>Cinnabon</h3>
-       <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more5"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more5">
-            <h2>Mothers day card</h2>
-            <div class="full_width">
-              <p>This was created for youtube user: 8Rodimus as an intro for his video game review channel.</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      
-      </li>
-      <li data-category="Flash">
-        <div class="shadow"> 
-        	<a class="zoom" rel="Flash" href="q4.jpg" title="0"> 
-        	<img src="portfolio/flash/q4.jpg" alt="Animation" width="180" height="139"/> </a> 
-         </div>
-        <!--end shadow-->
-        <h3>VIRTUAL INTERACTIVE </h3>
-       <p>Click here to view big image </p>
-        <a class="zoom" href="#read_more5"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more5">
-            <h2>Mothers day card</h2>
-            <div class="full_width">
-              <p>This was created for youtube user: 8Rodimus as an intro for his video game review channel.</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-<li data-category="Flash">
-        <div class="shadow"> 
-        	<a class="zoom" rel="Flash" href="portfolio/flash/Inter Order hospitality.jpg" title="0"> 
-        	<img src="portfolio/flash/Inter Order hospitality.jpg" alt="Animation" width="201" height="150"/> </a> 
-         </div>
-        <!--end shadow-->
-        <h3>Order hospitality </h3>
-       <p>Click here to view big image </p>
-        <a class="zoom" href="#read_more5"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more5">
-            <h2>Mothers day card</h2>
-            <div class="full_width">
-              <p>This was created for youtube user: 8Rodimus as an intro for his video game review channel.</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <li data-category="Documentry">
-        <div class="shadow">
-          <video width="200" height="150" controls>
-            <source src="movie.mp4" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
-            Your browser does not support the video tag. </video>
-        </div>
-        <!--end shadow-->
-        <h3>Documentry </h3>
-       <p>Click here to view big image </p>
-        <a class="zoom" href="#read_more5"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more5">
-            <h2>Mothers day card</h2>
-            <div class="full_width">
-              <p>This was created for youtube user: 8Rodimus as an intro for his video game review channel.</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more5">
-            <h2>Mothers day card</h2>
-            <div class="full_width">
-              <p>This was created for youtube user: 8Rodimus as an intro for his video game review channel.</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->      </li>
-      
-      <li data-category="Documentry">
-        <div class="shadow">
-          <video width="200" height="150" controls>
-            <source src="FIL35.mp4" type="video/mp4">
-            <source src="FIL35.ogg" type="video/ogg">
-            Your browser does not support the video tag. </video>
-        </div>
-        <!--end shadow-->
-        <h3>Documentry </h3>
-       <p>Click here to view big image </p>
-        <a class="zoom" href="#read_more5"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more5">
-            <h2>Mothers day card</h2>
-            <div class="full_width">
-              <p>This was created for youtube user: 8Rodimus as an intro for his video game review channel.</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more5">
-            <h2>Mothers day card</h2>
-            <div class="full_width">
-              <p>This was created for youtube user: 8Rodimus as an intro for his video game review channel.</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->      </li>
-      
-      
-      <li data-category="env">
-       <div class="shadow">
-          <a class="zoom" rel="portfolio" href="portfolio/web/forest2.jpg" title="0"> <img src="portfolio/web/T4.jpg" alt="Portfolio Image"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>iball web Demo</h3>
-       <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more6"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more6">
-            <h2>Iball</h2>
-            <div class="full_width">
-              <p>for iiisystems</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      
-      <li data-category="int">
-        <div class="shadow"><a class="zoom" rel="portfolio" href="portfolio/logo/livingroom2.jpg" title="0"><a class="zoom" rel="portfolio" href="livingroom21.jpg" title="0"><img src="portfolio/logo/livingroom21.jpg" alt="Portfolio Image"/></a></a></div>
-        <!--end shadow-->
-        <h3>PARTY TWIST</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more7"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more7">
-            <h2>logo partytwist</h2>
-            <div class="full_width">
-              <p>for free lance for logo speclist</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      
-      <li data-category="anim">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/iphone1.png" title="0"> 
-        	<img src="portfolio/graphics/iphone1.png" alt="Portfolio Image" width="200" height="150"/> </a> </div>
-        <!--end shadow-->
-        <h3>Iphone splash screen</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more8"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more8">
-            <div class="full_width">
-              <h2>My first abstract art work</h2>
-              <p>My first abstract art work</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p></p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      
-       <li data-category="int">
-        <div class="shadow">
-          <a class="zoom" rel="portfolio" href="portfolio/logo/000010.jpg" title="0"> <img src="portfolio/logo/000010.jpg" alt="Portfolio Image"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>adbakus</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more9"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more9">
-            <h2>for freelance</h2>
-            <div class="full_width">
-              <p>for logospeclist</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="int">
-        <div class="shadow">
-          <a class="zoom" rel="portfolio" href="portfolio/logo/daycropped1.jpg" title="0"> <img src="portfolio/logo/daycropped1.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>frisco gun club</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more9"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more9">
-            <h2>for freelance</h2>
-            <div class="full_width">
-              <p>for logospeclist</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="int">
-        <div class="shadow">
-          <a class="zoom" rel="portfolio" href="portfolio/logo/l4.jpg" title="0"> <img src="portfolio/logo/l4.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>frisco gun club</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more9"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more9">
-            <h2>for freelance</h2>
-            <div class="full_width">
-              <p>for logospeclist</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p></p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      
-      <li data-category="int">
-        <div class="shadow">
-          <a class="zoom" rel="portfolio" href="portfolio/logo/rd.jpg" title="0"> <img src="portfolio/logo/rd1.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>Royal Dhaka</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more10"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more10">
-            <h2>logo</h2>
-            <div class="full_width">
-              <p>frisco gun club</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p>.</p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-      <!--end display:none--></li>
-      <li data-category="int">
-        <div class="shadow">
-          <a class="zoom" rel="portfolio" href="portfolio/logo/htech.jpg" title="0"> <img src="portfolio/logo/htech.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>htech</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more10"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more10">
-            <h2>logo</h2>
-            <div class="full_width">
-              <p>frisco gun club</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p>.</p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-<!--end display:none--></li><li data-category="int">
-        <div class="shadow">
-          <a class="zoom" rel="portfolio" href="portfolio/logo/zabengg1.jpg" title="0"> <img src="portfolio/logo/zabengg1.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>Zabengg </h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more10"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more10">
-            <h2>logo</h2>
-            <div class="full_width">
-              <p>frisco gun club</p>
-            </div>
-            <!--end one_third-->
-            <div class="two_third">
-              <p>.</p>
-            </div>
-            <!--end two_third-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-      <!--end display:none--></li>
-      <li data-category="int">
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more10">
-            <div class="two_third"></div>
-          </div>
-        </div>
-      </li>
-      
-        <li data-category="anim">
-       <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/Pipe1.png"  title="0"> 
-        	<img src="portfolio/graphics/Pipe1.png" alt="Animation" width="200" height="150"/> </a> 
-         </div>
-        <!--end shadow-->
-        <h3>2d pipe illustration</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more11"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more11">
-         	<h2>splach screen </h2>
-            <div class="full_width">
-              <p>I created this for iphone splash screen</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-       <li data-category="anim">
-       <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/olpers  finel - Copy.jpg"  title="0"> 
-        	<img src="portfolio/graphics/olpers  finel - Copy.jpg" alt="Animation" width="200" height="150"/> </a> 
-         </div>
-        <!--end shadow-->
-        <h3>olper's corporate invitation card</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more11"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more11">
-         	<h2>splach screen </h2>
-            <div class="full_width">
-              <p>I created this for iphone splash screen</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li> 
-<li data-category="anim">
-       <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/graphics/Zong-Party Card.jpg"  title="0"> 
-        	<img src="portfolio/graphics/Zong-Party Card.jpg" alt="Animation" width="200" height="150"/> </a> 
-  </div>
-        <!--end shadow-->
-        <h3>Zong corporate invitation card</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more11"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more11">
-         	<h2>splach screen </h2>
-            <div class="full_width">
-              <p>I created this for iphone splash screen</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li> 
-<li data-category="anim"><!--end shadow-->
-  <h3>&nbsp;</h3>
-  <div style="display:none">
-    <div class="read_more_wrap" id="read_more11">
-   	  <h2>splach screen </h2>
-      <div class="full_width">
-        <p>I created this for iphone splash screen</p>
+        </article>
+        <article class="card booking-card" id="booking">
+          <div class="pill"><i class="fa-solid fa-pen"></i> Inquiry Form</div>
+          <h2>Send a service request</h2>
+          <form id="bookingForm">
+            <div class="field-row">
+              <div><label for="name">Full Name</label><input id="name" name="name" type="text" required placeholder="Your full name"></div>
+              <div><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" required placeholder="0300-XXXXXXX"></div>
+            </div>
+            <div class="field-row">
+              <div><label for="serviceType">Service Type</label><select id="serviceType" name="serviceType" required><option value="">Select service</option><option>Graphic designing</option><option>Branding</option><option>Digital marketing</option><option>Website design or development</option><option>Software development</option><option>AutoCAD designing</option><option>CRM software</option><option>POS software</option><option>Sale Bartender software</option><option>Busy software</option><option>Video editing</option><option>Resume help</option><option>Portfolio help for interviews</option><option>Car sale and purchase help</option><option>Online doctor consultancy</option><option>Online teacher service</option><option>Solar panel cleaning</option><option>Earthing boring for solar system</option><option>Automobile cleaning</option><option>Plumbing help</option><option>Electric work help</option><option>Water filter installation</option><option>Light RO plant service</option><option>MS-Structure work</option><option>Walk way work</option><option>Red oxide paint</option><option>Epoxy paint</option><option>Tax prep service</option><option>Medicine delivery</option><option>Books or accessories delivery</option><option>General inquiry</option></select></div>
+              <div><label for="propertyType">Client Type</label><select id="propertyType" name="propertyType" required><option value="">Select type</option><option>Home owner</option><option>Individual customer</option><option>Small business</option><option>Office or commercial site</option><option>Factory or industrial site</option><option>Other</option></select></div>
+            </div>
+            <div class="field-row">
+              <div><label for="panels">Project Size / Details</label><input id="panels" name="panels" type="text" required placeholder="e.g. 12 panels, 1 logo, 1 website, 1 tap change"></div>
+              <div><label for="area">Area / Location</label><input id="area" name="area" type="text" required placeholder="Area in Karachi"></div>
+            </div>
+            <div><label for="message">Additional Information</label><textarea id="message" name="message" placeholder="Tell me briefly what you need"></textarea></div>
+            <button class="btn btn-primary" type="submit"><i class="fa-brands fa-whatsapp"></i> Send Request</button>
+          </form>
+        </article>
       </div>
-      <!--end two_third_last-->
-      <div class="one_third_last">
-        <p></p>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-bar">
+        <p>Freelance Multimedia consultant and services in Karachi © 2025 - 2026</p>
+      <div class="footer-socials">
+        <a href="https://www.youtube.com/@fahimnoorbhatti8211/videos" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@fahimnoorbhatti" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/p/FNB-Solar-Panels-Cleaning-Services-61575639219320/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/p/DUml58qDC_H/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://pk.linkedin.com/company/fnb-solar-panels-cleaning-services" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://x.com/fahimnoorb/header_photo" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.pinterest.com/fahim_bhatti/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="mailto:fahimnoor85@gmail.com" aria-label="Gmail"><i class="fa-brands fa-google"></i></a>
       </div>
-      <!--end one_third_last-->
+      <p>Phone: <a href="tel:03003732537">0300-3732537</a></p>
     </div>
-    <!--end read_more_wrap-->
-    </div>
-</li>
-<li data-category="anim">
-  <div style="display:none">
-    <div class="read_more_wrap" id="read_more11">      <!--end one_third_last-->
-    </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="env">
-       <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/web/1.jpg"  title="0"> 
-        	<img src="portfolio/web/1.jpg" alt="Animation" width="200" height="150"/> </a> 
-         </div>
-        <!--end shadow-->
-        <h3>DissertationPros</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more11"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more11">
-         	<h2>splach screen </h2>
-            <div class="full_width">
-              <p>I created this for iphone splash screen</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      
-        <li data-category="env">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/web/11921885_855774651184751_268968584179360893_n.jpg" title="0"> 
-        	<img src="portfolio/web/q1.jpg" alt="Animation" width="200" height="150"/> </a> 
-         </div>
-        <!--end shadow-->
-        <h3>Signature</h3>
-       <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more12"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more12">
-            <h2>visiting card</h2>
-            <div class="full_width">
-              <p>for microburst</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      <li data-category="env">
-        <div class="shadow"> 
-        	<a class="zoom" rel="portfolio" href="portfolio/web/q2.jpg" title="0"> 
-        	<img src="portfolio/web/q2.jpg" alt="Animation" width="200" height="150"/> </a> 
-         </div>
-        <!--end shadow-->
-        <h3>Darbar</h3>
-       <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more12"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more12">
-            <h2>visiting card</h2>
-            <div class="full_width">
-              <p>for microburst</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-      
-        <li data-category="env">
-       <div class="shadow">
-       <a class="zoom" rel="portfolio" href="portfolio/web/q3.jpg" title="0"> <img src="portfolio/web/q3.jpg" alt="Portfolio Image" width="200" height="150"/> </a></div>
-        <!--end shadow-->
-        <h3>AHS Salon</h3>
-       <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more13"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more13">
-            <h2>web demo</h2>
-            <div class="full_width">
-              <p>web demo for iiisystems</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-	  
-         <li data-category="env">
-        <div class="shadow">
-          <p><a class="zoom" rel="portfolio" href="portfolio/web/L3.jpg" > <img src="portfolio/web/T3.jpg" alt="Portfolio Image"/> </a> </p>
-          <p>&nbsp;</p>
-        </div>
-        <!--end shadow-->
-        <h3>SP SHENZHEN</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more14"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more14">
-            <h2>china client</h2>
-            <div class="two_third_last">
-              <p>for iiisystems</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-            
-       <li data-category="env">
-        <div class="shadow">
-          <div class="image"> <a class="zoom" rel="portfolio" href="portfolio/web/3.jpg" > <img src="portfolio/web/3.jpg" alt="Portfolio Image" width="124" height="150"/> </a> </div>
-        </div>
-        <!--end shadow-->
-        <h3>academic writing</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more15"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more15">
-            <h2>hot-nspicy</h2>
-            <div class="full_width">
-              <p>This website design and develop by me.</p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-        <li data-category="env">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/web/L5.jpg" > <img src="portfolio/web/T5.jpg" alt="Portfolio Image"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>TRUST</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>trust web site</h2>
-            <p>This is local website</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li> <li data-category="env">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/web/sunsetscene2.jpg" > <img src="portfolio/web/T8.jpg" alt="Portfolio Image"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>Jones Air</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>FIMS GROUP</h2>
-            <p>Click here to view big image</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <!--end display:none-->
-      </li>
-     <li data-category="env">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/web/w9.jpg" > <img src="portfolio/web/w9.jpg" alt="Portfolio Image"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>AHC</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>FIMS GROUP</h2>
-            <p>Click here to view big image</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more17">
-            <div class="full_width">
-              <h2>Bearing</h2>
-              <p>Bearing modeling using 3d max</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p></p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-       <!--end display:none-->
-      </li>
-      
-      <li data-category="env">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/web/11051954_855776931184523_2193885203870650277_n.jpg" > <img src="portfolio/web/T6.jpg" alt="Portfolio Image"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>hot and spicy</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>FIMS GROUP</h2>
-            <p>Click here to view big image</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more17">
-            <div class="full_width">
-              <h2>Bearing</h2>
-              <p>Bearing modeling using 3d max</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p></p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-       <!--end display:none-->
-      </li>
-<li data-category="env">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/web/web01.jpg" > <img src="portfolio/web/T7.jpg" alt="Portfolio Image"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>FIMS</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>FIMS GROUP</h2>
-            <p>Click here to view big image</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more17">
-            <div class="full_width">
-              <h2>Bearing</h2>
-              <p>Bearing modeling using 3d max</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p></p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-       <!--end display:none-->
-      </li>
-      
-      <li data-category="Mod">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/graphics/rd flyer sunday01.jpg" > <img src="portfolio/graphics/rd flyer sunday01.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>Flyer for RD</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>FIMS GROUP</h2>
-            <p>Click here to view big image</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more17">
-            <div class="full_width">
-              <h2>Bearing</h2>
-              <p>Bearing modeling using 3d max</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p></p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-       <!--end display:none-->
-      </li>
-<li data-category="mod">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/3D/tcs three convoyer.jpg" > <img src="portfolio/3D/tcs three convoyer.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>Concept</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>FIMS GROUP</h2>
-            <p>Click here to view big image</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more17">
-            <div class="full_width">
-              <h2>Bearing</h2>
-              <p>Bearing modeling using 3d max</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p></p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-       <!--end display:none-->
-      </li>
-<li data-category="Events">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/events/DSC_8144.jpg" > <img src="portfolio/events/DSC_8144.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>Engro awards</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>FIMS GROUP</h2>
-            <p>Click here to view big image</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more17">
-            <div class="full_width">
-              <h2>Bearing</h2>
-              <p>Bearing modeling using 3d max</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p></p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-       <!--end display:none-->
-      </li>
-      <li data-category="anim">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/graphics/Application Development.jpg" > <img src="portfolio/graphics/Application Development.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>CD Cover </h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>FIMS GROUP</h2>
-            <p>Click here to view big image</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more17">
-            <div class="full_width">
-              <h2>Bearing</h2>
-              <p>Bearing modeling using 3d max</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p></p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-       <!--end display:none-->
-      </li>
-      <li data-category="anim">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/graphics/New folder (2)/stationery - Copy.jpg" > <img src="portfolio/graphics/New folder (2)/stationery - Copy.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>FIMS</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>FIMS GROUP</h2>
-            <p>Click here to view big image</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more17">
-            <div class="full_width">
-              <h2>Bearing</h2>
-              <p>Bearing modeling using 3d max</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p></p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-       <!--end display:none-->
-      </li>
-      <li data-category="anim">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/graphics/New folder (2)/321.jpg" > <img src="portfolio/graphics/New folder (2)/321.jpg" alt="Portfolio Image" width="150" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>FIMS</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>FIMS GROUP</h2>
-            <p>Click here to view big image</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more17">
-            <div class="full_width">
-              <h2>Bearing</h2>
-              <p>Bearing modeling using 3d max</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p></p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-       <!--end display:none-->
-      </li>
-<li data-category="env">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/web/web03.jpg" > <img src="portfolio/web/web03.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>Rosie Jones Eyes </h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>FIMS GROUP</h2>
-            <p>Click here to view big image</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more17">
-            <div class="full_width">
-              <h2>Bearing</h2>
-              <p>Bearing modeling using 3d max</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p></p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-       <!--end display:none-->
-      </li><li data-category="env">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/web/web02.jpg" > <img src="portfolio/web/web02.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>EDMEK</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>FIMS GROUP</h2>
-            <p>Click here to view big image</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more17">
-            <div class="full_width">
-              <h2>Bearing</h2>
-              <p>Bearing modeling using 3d max</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p></p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-       <!--end display:none-->
-      </li><li data-category="env">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/web/webwork.jpg" > <img src="portfolio/web/webwork01.jpg" alt="Portfolio Image"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>bIZONDED</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>FIMS GROUP</h2>
-            <p>Click here to view big image</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more17">
-            <div class="full_width">
-              <h2>Bearing</h2>
-              <p>Bearing modeling using 3d max</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p></p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-       <!--end display:none-->
-      </li>
-      <li data-category="env">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/web/website.jpg" > <img src="portfolio/web/website.jpg" alt="Portfolio Image" width="205" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>bIZONDED</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>FIMS GROUP</h2>
-            <p>Click here to view big image</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more17">
-            <div class="full_width">
-              <h2>Bearing</h2>
-              <p>Bearing modeling using 3d max</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p></p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-       <!--end display:none-->
-      </li>
-      <li data-category="env">
-        <div class="shadow">
-           <a class="zoom" rel="portfolio" href="portfolio/web/cdgk.jpg" > <img src="portfolio/web/4t.jpg" alt="Portfolio Image" width="200" height="150"/> </a>
-        </div>
-        <!--end shadow-->
-        <h3>bIZONDED</h3>
-        <p>Click here to view big image</p>
-        <a class="zoom" href="#read_more16"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more16">
-            <h2>FIMS GROUP</h2>
-            <p>Click here to view big image</p>
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more17">
-            <div class="full_width">
-              <h2>Bearing</h2>
-              <p>Bearing modeling using 3d max</p>
-            </div>
-            <!--end full_width-->
-            <div class="one_half">
-              <p></p>
-            </div>
-            <!--end one_half-->
-            <div class="one_half_last">
-              <p></p>
-            </div>
-            <!--end one_half_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div>
-       <!--end display:none-->
-      </li>
-       <li data-category="Workfor">
-        <div class="shadow"> 
-        	<a class="zoom" rel="Flash" href="q4.jpg" title="0"> 
-        	<div class="sketchfab-embed-wrapper">
-    <iframe title="A 3D model" width="200" height="150" src="https://sketchfab.com/models/3139259c57fe40b8afddb345a94c7b50/embed?autostart=1&amp;preload=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-        <a href="https://sketchfab.com/3d-models/just-rack-3139259c57fe40b8afddb345a94c7b50?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;"></p>
-</div>
-</a> 
-         </div>
-        <!--end shadow-->
-        <h3>Workfor </h3>
-       <p>Click here to view big image </p>
-        <a class="zoom" href="#read_more5"><span class="btn">read more</span></a>
-        <div style="display:none">
-          <div class="read_more_wrap" id="read_more5">
-            <h2>Mothers day card</h2>
-            <div class="full_width">
-              <p>This was created for youtube user: 8Rodimus as an intro for his video game review channel.</p>
-            </div>
-            <!--end two_third_last-->
-            <div class="one_third_last">
-              <p></p>
-            </div>
-            <!--end one_third_last-->
-          </div>
-          <!--end read_more_wrap-->
-        </div> 
-    <!--end projects-->
-    <hr class="content_hr"/>
-  </div>
-  <!--end my_work--><!--end blog--><!--end typography-->
-<div id="Services" class="section"  data-key="C">
-    <div class="heading">
-      <div class="heading_cont">
-		<a href="#home" class="go_up"></a>
-        
-<h1>Clients </h1>
-     <marquee behavior="scroll" direction="left">
-     <img src="portfolio/clients/a.jpg" width="50" height="50"><img src="portfolio/clients/b.jpg" width="50" height="50"><img src="portfolio/clients/c.jpg" width="50" height="50"><img src="portfolio/clients/d.jpg" width="50" height="50"><img src="portfolio/clients/e.jpg" width="50" height="50"><img src="portfolio/clients/f.jpg" width="50" height="50"><img src="portfolio/clients/g.jpg" width="50" height="50"><img src="portfolio/clients/h.png" width="50" height="50"><img src="portfolio/clients/i.png" width="50" height="50"><img src="portfolio/clients/j.png" width="50" height="50"><img src="portfolio/clients/k.png" width="50" height="50"><img src="portfolio/clients/l.png" width="50" height="50"><img src="portfolio/clients/m.png" width="50" height="50"><img src="portfolio/clients/n.png" width="50" height="50"><img src="portfolio/clients/o.png" width="50" height="50"><img src="portfolio/clients/p.png" width="50" height="50"><img src="portfolio/clients/q.png" width="50" height="50"><img src="portfolio/clients/r.png" width="50" height="50"><img src="portfolio/clients/s.png" width="50" height="50"><img src="portfolio/clients/t.png" width="50" height="50"><img src="portfolio/clients/u.png" width="50" height="50"><img src="portfolio/clients/v.png" width="50" height="50"><img src="portfolio/clients/10429338_829937383734959_4519542481193723924_n.jpg" width="50" height="50">
-     <img src="portfolio/clients/l8.jpg" width="50" height="50">
-     </marquee>
-        <span class="heading_bg"> </span>
-        <!--end heading_bg-->
-      </div>
-      <!--end heading_cont-->
-    </div>
-    <!--end heading-->
-        <!--end projects-->
-    <hr class="content_hr"/>
-  </div>
-  <!--end my_work--><!--end blog--><!--end typography-->
-<div id="Projects" class="Projects"  data-key="C">
-    <div class="heading">
-      <div class="heading_cont">
-		<a href="#home" class="go_up"></a>
-        
-<h1>Projects </h1>
-        <marquee behavior="scroll" direction="left">
-	<img src="portfolio/Projects/rrient.png" width="49" height="49"><img src="portfolio/Projects/ecd1bf4aa8781e0e4761106cebffce16.jpg" width="72" height="50"><img src="portfolio/Projects/engro.png" width="50" height="50"><img src="portfolio/Projects/alkaram.png" width="50" height="50"><img src="portfolio/Projects/efd37122b6dece995bec2b60d167da5d.jpg" width="131" height="44"><img src="portfolio/Projects/Veet-Miss-Super-Model-Contest-III-logo-1024x585.png" width="102" height="59"><img src="portfolio/Projects/bonanza.png" width="44" height="44">
-        </marquee>
-        <span class="heading_bg"> </span>
-        <!--end heading_bg-->
-      </div>
-      <!--end heading_cont-->
-    </div>
-    <!--end heading-->
-  <div id="contacts" class="section"  data-key="C">
-    <div class="heading">
-      <div class="heading_cont">
-		<a href="#home" class="go_up"></a>
-        <h1>Contact Me</h1>
-        
-        <!--end heading_bg-->
-      </div>
-      <!--end heading_cont-->
-    </div>
-    <!--end heading-->
-    
-    
-      <div class="full_width">
-        <h2>Get in touch</h2>
-        <p>Feel free to contact me regarding my work or to enquire about the services I offer.</p>
-        <p>&nbsp;</p>
-      </div>
-      <!--end full_width-->
-    
-    <!--end content_left-->
-    <div class="sidebar_right">
-      <div class="one_fourth">
-        <h2>How to find me</h2>
-        <p><strong>Email:</strong> fahimnoor@hotmail.com</p>
-        <p><strong>Gtalk:</strong> fahimnoor85@gmail.com</p>
-        <p><strong>Phone:</strong> +923003732537</p>
-      </div>
-      <!--end one_fourth-->
-      <div class="one_fourth" style="display:none;">
-        <h2>Don't miss a thing</h2>
-        <h4>SUBSCRIBE TO MY NEWSLETTER</h4>
-        <form action="#" method="post" enctype="text/plain" id="subscribe">
-          <input id="subscribtion" type="text" name="subscribtion_email" value="Your e-mail" />
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-      <!--end one_fourth-->
-    </div>
-    <!--end sidebar_right-->
-  </div>
-  <!--end contacts-->
-</div>
-<!--end main-->
-<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/Lynne_3D.json?callback=twitterCallback2&amp;count=4">
-</script>
+  </footer>
+  <a class="floating-call" href="tel:03003732537" aria-label="Call now"><i class="fa-solid fa-phone"></i> Call Now</a>
+  <a class="floating-wa" href="https://wa.me/923003732537?text=Assalamualaikum!%20Fahim,%20I%20want%20to%20ask%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <script>
+    const menuBtn=document.getElementById("menuBtn"),siteNav=document.getElementById("siteNav"),bookingForm=document.getElementById("bookingForm"),year=document.getElementById("year");
+    const slides=[...document.querySelectorAll(".slide")],sliderDots=[...document.querySelectorAll(".slider-dots button")];
+    menuBtn.addEventListener("click",()=>{const isOpen=siteNav.classList.toggle("open");menuBtn.setAttribute("aria-expanded",String(isOpen));});
+    document.querySelectorAll('nav a[href^="#"]').forEach(link=>link.addEventListener("click",()=>{siteNav.classList.remove("open");menuBtn.setAttribute("aria-expanded","false");}));
+    bookingForm.addEventListener("submit",event=>{event.preventDefault();const data=new FormData(bookingForm);const message=["Assalamualaikum Fahim,","","I want to ask about your services.",`Name: ${data.get("name")}`,`Phone: ${data.get("phone")}`,`Service Type: ${data.get("serviceType")}`,`Client Type: ${data.get("propertyType")}`,`Project Size / Panels: ${data.get("panels")}`,`Area: ${data.get("area")}`,`Additional Info: ${data.get("message") || "N/A"}`].join("\n");window.open(`https://wa.me/923003732537?text=${encodeURIComponent(message)}`,"_blank","noopener");});
+    let currentSlide=0;
+    const showSlide=index=>{currentSlide=index;slides.forEach((slide,idx)=>slide.classList.toggle("active",idx===index));sliderDots.forEach((dot,idx)=>dot.classList.toggle("active",idx===index));};
+    sliderDots.forEach((dot,idx)=>dot.addEventListener("click",()=>showSlide(idx)));
+    showSlide(0);
+    year.textContent=new Date().getFullYear();
+  </script>
 </body>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-253404-7']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-</body>
-
-<!-- Start of Woopra Code -->
-<script type="text/javascript">
-var woo_settings = {idle_timeout:'300000', domain:'.com'};
-(function(){
-var wsc = document.createElement('script');
-wsc.src = document.location.protocol+'//static.woopra.com/js/woopra.js';
-wsc.type = 'text/javascript';
-wsc.async = true;
-var ssc = document.getElementsByTagName('script')[0];
-ssc.parentNode.insertBefore(wsc, ssc);
-})();
-</script>
-<!-- End of Woopra Code -->
-
 </html>
