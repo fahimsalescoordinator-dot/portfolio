@@ -1,0 +1,157 @@
+
+/* === Styling headings, paragraphs, unordered and ordered lists === */
+
+h1 {
+	font-family: "Titillium", Candara, Arial, sans-serif;
+	font-weight: normal;
+	margin-top: -3px;
+	font-size: 24px;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-family: "Titillium", Candara, Arial, sans-serif;
+	font-weight: normal;
+	margin-bottom: 12px;
+	font-size: 19px;
+}
+
+h3 {
+	font-family: Helvetica, sans-serif;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-family: Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 20px;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin-bottom: 20px;
+	margin-top: -5px;
+}
+
+h5 {
+	font-family: Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 20px;
+	font-style: italic;
+}
+
+p, ul, ol {
+	font-family: Droid Sans, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 21px;
+}
+
+
+/* === Styling the blockquote === */
+
+blockquote p {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style:italic;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+/* === Styling the navigation === */
+
+#nav li {
+	font-family: "Titillium", Candara, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.welcome_box p {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 19px;
+	line-height: 28px;
+	font-style: italic;
+}
+
+/* === Styling the slider === */
+
+.nivo-caption {
+	font-family: Droid Sans, Helvetica, sans-serif;
+}
+
+/* === Styling the tweets === */
+
+#twitter_update_list li {
+	font-family: Droid Sans, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: italic;
+	line-height: 20px;
+}
+
+#footer p {
+	font-family: Droid Sans, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+/* === Styling the filter === */ 
+
+#filter li, #categories li, .archives {
+	font-family: Droid Sans, Helvetica, sans-serif;
+	font-style: italic;
+	font-size: 11px;
+}
+
+/* === Styling the read more button === */
+
+.btn {
+	font-style: italic;
+	font-family: Droid Sans, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 20px;
+}
+
+.btn:hover {
+	text-decoration: underline;
+}
+
+
+/* === Styling the form === */
+
+form, button {
+	font-family: Droid Sans, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+input, textarea {
+	font-family: Droid Sans, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 20px;
+}
+
+#subscribe button, #search_blog_form button {
+	font-family: Helvetica, sans-serif;
+	font-size: 9px;
+}
+
+/* === STYLING BLOG POST SECTION === */
+
+.tags a {
+	font-family: Droid Sans, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.post_bottom a {
+	font-family: Droid Sans, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+#blog_post_form button {
+	font-family: Droid Sans, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.bubble a {
+	font-family: Droid Sans, Helvetica, sans-serif;
+	font-size: 9px;
+	line-height: 20px;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin-bottom: 12px;
+}

@@ -1,0 +1,16 @@
+<li data-category="Documentry">
+        <div class="shadow"> 
+        	<a class="zoom" rel="portfolio" href=https://www.youtube.com/watch?v=56bncGl__GI title="3D "> 
+        	<img src="portfolio/3D/3d00.jpg" alt="Portfolio Image" width="200" height="150"/> </a> </div>
+        <!--end shadow-->
+        <h3>Bullet Proof Window Film for Bank security</h3>
+        <p>Click here to view big image</p>
+       <a class="zoom" href="#read_more3"><span class="btn">read more</span></a>
+
+
+shmahmed@gmail.com
+behance
+http://ahafeezassociates.com/
+http://gztechtraders.co.za/index.html
+https://www.michaelekker.com/
+https://www.behance.net/shmahmed879d
