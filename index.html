@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -23,14 +23,15 @@
     .hero-mark{font-size:1.85rem;font-weight:800;letter-spacing:-.08em;color:var(--brand)}
     .brand-copy strong{display:block;color:var(--brand);font-size:1rem}
     .brand-copy span{color:var(--muted);font-size:.82rem}
-      nav ul{list-style:none;display:flex;align-items:center;gap:18px}
+      nav ul{list-style:none;display:flex;align-items:center;gap:12px}
       nav li{position:relative}
-      nav .submenu{list-style:none;position:absolute;top:100%;left:0;min-width:240px;display:none;flex-direction:column;gap:0;background:rgba(18,18,18,.98);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);z-index:50}
-      nav .submenu a{display:block;padding:12px 16px;white-space:nowrap}
+      nav .submenu{list-style:none;position:absolute;top:calc(100% + 8px);left:0;min-width:240px;display:none;flex-direction:column;gap:8px;padding:10px;background:rgba(18,18,18,.98);border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:var(--shadow);z-index:50}
+      nav .submenu a{display:block;padding:12px 16px;white-space:nowrap;border-radius:0;background:transparent;transition:background-color .2s ease,color .2s ease}
       nav .submenu li+li{border-top:1px solid var(--line)}
       nav li.has-dropdown:hover>.submenu,nav li.has-dropdown:focus-within>.submenu{display:flex}
-    nav a{color:var(--muted);font-weight:600}
-    nav a:hover,nav a:focus-visible{color:var(--brand)}
+    nav a{display:inline-flex;align-items:center;padding:12px 16px;border-radius:0;color:var(--muted);font-weight:600;transition:background-color .2s ease,color .2s ease,transform .2s ease,box-shadow .2s ease}
+    nav a:hover,nav a:focus-visible,nav a[aria-current="page"]{background:rgba(255,255,255,.08);color:var(--brand);transform:none;box-shadow:none}
+    nav .submenu a:hover,nav .submenu a:focus-visible{background:rgba(255,255,255,.08);color:var(--brand);transform:none;box-shadow:none}
     .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;font-weight:700}
     .nav-cta{padding:12px 18px;background:var(--brand);color:#fff;box-shadow:var(--shadow)}
     .nav-price{background:var(--sun);color:#090909}
@@ -45,7 +46,11 @@
     .slide{grid-area:1/1;min-height:300px;display:flex;align-items:flex-end;padding:34px;background-size:cover;background-position:center;opacity:0;transition:opacity .8s ease}
     .slide.active{opacity:1}
     .slide::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.82))}
-    .slide-content{position:relative;z-index:1;max-width:560px;color:#fff}
+    .slide-content{position:relative;z-index:1;max-width:760px;color:#fff}
+    .slide-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
+    .slide-copy{max-width:560px}
+    .slide-link{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;min-width:140px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.12);color:#fff;font-weight:700;backdrop-filter:blur(10px)}
+    .slide-link:hover,.slide-link:focus-visible{background:#fff;color:#090909}
     .slide-content h2{font-size:clamp(1.45rem,3.6vw,2.35rem);line-height:1.04;letter-spacing:-.04em;margin:12px 0}
     .slide-content p{color:rgba(255,255,255,.88);font-size:.95rem}
     .slider-dots{position:absolute;right:24px;bottom:22px;display:flex;gap:8px;z-index:2}
@@ -130,10 +135,12 @@
     .floating-wa{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#090909;box-shadow:0 18px 30px rgba(0,0,0,.35);font-size:1.5rem}
     .floating-call{position:fixed;left:18px;bottom:18px;display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:999px;background:#fff;color:#090909;font-weight:800;box-shadow:0 18px 30px rgba(0,0,0,.35);z-index:45}
     @media (max-width:980px){.hero-grid,.services,.packages,.pricing,.equipment,.benefits,.steps,.contact-grid,.difference-grid{grid-template-columns:1fr}}
-      @media (max-width:820px){.menu-btn{display:inline-flex}nav{position:absolute;top:84px;left:0;right:0;padding:0 16px 16px;display:none}nav.open{display:block}nav ul{flex-direction:column;align-items:stretch;gap:0;background:rgba(18,18,18,.98);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}nav li+li{border-top:1px solid var(--line)}nav a,.nav-cta{display:block;padding:16px 18px}.nav-cta{border-radius:0}nav .submenu{position:static;display:flex;min-width:0;border:0;border-top:1px solid var(--line);border-radius:0;box-shadow:none}nav .submenu a{padding:12px 28px;background:transparent}.hero-points,.stats,.field-row{grid-template-columns:1fr}.brand-logo{width:76px;height:76px;padding:8px;border-radius:18px}.estimate-list li{flex-direction:column;gap:6px}.slide{padding:24px}.floating-call{left:14px;bottom:90px}}
+      @media (max-width:820px){.menu-btn{display:inline-flex}nav{position:absolute;top:84px;left:0;right:0;padding:0 16px 16px;display:none}nav.open{display:block}nav ul{flex-direction:column;align-items:stretch;gap:0;background:rgba(18,18,18,.98);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}nav li+li{border-top:1px solid var(--line)}nav a,.nav-cta{display:block;padding:16px 18px;border-radius:0}.nav-cta{border-radius:0}nav .submenu{position:static;display:flex;min-width:0;gap:0;padding:0;border:0;border-top:1px solid var(--line);border-radius:0;box-shadow:none}nav .submenu li+li{border-top:1px solid var(--line)}nav .submenu a{padding:12px 28px;border-radius:0;background:transparent}.hero-points,.stats,.field-row{grid-template-columns:1fr}.brand-logo{width:76px;height:76px;padding:8px;border-radius:18px}.estimate-list li{flex-direction:column;gap:6px}.slide{padding:24px}.slide-head{flex-direction:column;align-items:flex-start}.floating-call{left:14px;bottom:90px}}
     @media (max-width:560px){.container{width:min(var(--max),calc(100% - 20px))}.nav-wrap{min-height:74px;gap:10px}.brand{gap:10px}.brand-logo{width:62px;height:62px;padding:7px;border-radius:14px}.brand-copy strong{font-size:.92rem}.brand-copy span{font-size:.72rem}nav{top:74px;padding:0 10px 12px}.hero-mark{width:88px;height:88px;padding:10px;border-radius:22px}.top-contact{font-size:.8rem;gap:10px;padding:8px 0 10px}}
     @media (max-width:420px){.brand-copy span{display:none}.brand-copy strong{font-size:.88rem}.brand-logo{width:56px;height:56px;padding:6px;border-radius:12px}.nav-wrap{min-height:68px}nav{top:68px}}
   </style>
+  
+  <link rel="stylesheet" href="./card-theme.css">
 </head>
 <body>
   <header>
@@ -148,9 +155,9 @@
       <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false" aria-controls="siteNav"><i class="fa-solid fa-bars"></i></button>
       <nav id="siteNav">
         <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./projects.html">Projects</a></li>
-            <li class="has-dropdown"><a href="./services.html">Services</a><ul class="submenu"><li><a href="./design/index.html">Design</a></li><li><a href="./services.html#cleaning">Cleaning</a></li><li><a href="./services.html#health">Health</a></li><li><a href="./services.html#car">Car</a></li><li><a href="./services.html#tax">Tax</a></li><li><a href="./services.html#teacher">Teacher</a></li><li><a href="./services.html#maintenance">Maintenance</a></li></ul></li>
+          <li><a href="./index.html" aria-current="page">Home</a></li>
+          <li class="has-dropdown"><a href="./projects.html">Projects</a><ul class="submenu"><li><a href="./projects.html">Projects Portfolio</a></li><li><a href="./gallery.html">Gallery</a></li></ul></li>
+            <li class="has-dropdown"><a href="./services.html">Services</a><ul class="submenu"><li><a href="./design/index.html">Design</a></li><li><a href="./solar-panels.html">Solar</a></li><li><a href="./services.html#cleaning">Cleaning</a></li><li><a href="./services.html#health">Health</a></li><li><a href="./services.html#car">Car</a></li><li><a href="./services.html#tax">Tax</a></li><li><a href="./services.html#teacher">Teacher</a></li><li><a href="./services.html#maintenance">Maintenance</a></li><li><a href="./generator-repair-maintenance.html">Generator Repair and Maintenance</a></li></ul></li>
             <li class="has-dropdown"><a href="./offers.html">Offers</a><ul class="submenu"><li><a href="./offers.html#digital-offers">Digital</a></li><li><a href="./offers.html#cleaning-offers">Cleaning</a></li><li><a href="./offers.html#maintenance-offers">Maintenance</a></li><li><a href="./offers.html#business-offers">Business</a></li></ul></li>
           <li class="has-dropdown"><a href="./pricing.html">Pricing</a><ul class="submenu"><li><a href="./pricing-solar-cleaning.html">Solar Cleaning</a></li><li><a href="./pricing-coloring.html">Coloring</a></li><li><a href="./pricing-website-designing.html">Website Designing</a></li><li><a href="./pricing-warehouse-solutions.html">Warehouse Solution</a></li></ul></li>
           <li><a href="./experiance.html">Experiance</a></li>
@@ -168,9 +175,14 @@
           <div class="slider-track" id="sliderTrack">
             <article class="slide active" style="background-image:linear-gradient(160deg,rgba(0,0,0,.48),rgba(32,32,32,.58)),url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80');">
               <div class="slide-content">
-                <div class="eyebrow"><i class="fa-solid fa-solar-panel"></i> Solar Services</div>
-                <h2>Solar panel cleaning and installation service for homes and businesses.</h2>
-                <p>Support for solar panel cleaning, installation coordination, and earthing boring services.</p>
+                <div class="slide-head">
+                  <div class="slide-copy">
+                    <div class="eyebrow"><i class="fa-solid fa-solar-panel"></i> Solar Services</div>
+                    <h2>Solar panel cleaning and installation service for homes and businesses.</h2>
+                    <p>Support for solar panel cleaning, installation coordination, and earthing boring services.</p>
+                  </div>
+                  <a class="slide-link" href="./solar-panels.html">Read More</a>
+                </div>
               </div>
             </article>
             <article class="slide" style="background-image:linear-gradient(160deg,rgba(18,18,18,.42),rgba(32,32,32,.58)),url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80');">
@@ -182,9 +194,14 @@
             </article>
             <article class="slide" style="background-image:linear-gradient(160deg,rgba(14,14,14,.44),rgba(34,34,34,.60)),url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1600&q=80');">
               <div class="slide-content">
-                <div class="eyebrow"><i class="fa-solid fa-house-circle-check"></i> Home Maintenance</div>
-                <h2>Home maintenance support including plumbing, electrician work, and coloring services.</h2>
-                <p>Useful maintenance help for homes, offices, and business spaces that need practical local support.</p>
+                <div class="slide-head">
+                  <div class="slide-copy">
+                    <div class="eyebrow"><i class="fa-solid fa-house-circle-check"></i> Home Maintenance</div>
+                    <h2>Home maintenance support including plumbing, electrician work, and coloring services.</h2>
+                    <p>Useful maintenance help for homes, offices, and business spaces that need practical local support.</p>
+                  </div>
+                  <a class="slide-link" href="./pricing-coloring.html">Read More</a>
+                </div>
               </div>
             </article>
             <article class="slide" style="background-image:linear-gradient(160deg,rgba(16,16,16,.42),rgba(36,36,36,.60)),url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80');">
@@ -225,6 +242,20 @@
             <button type="button" data-slide="5" aria-label="Show slide 6"></button>
             <button type="button" data-slide="6" aria-label="Show slide 7"></button>
           </div>
+        </div>
+      </div>
+    </section>
+    <section id="packages">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Main Service Offers</h2></div>
+          <p>Your homepage now groups the work into clear categories that match what you actually offer.</p>
+        </div>
+          <div class="packages">
+            <article class="card featured"><div class="package-tag"><i class="fa-solid fa-soap"></i> Cleaning Services</div><h3>Solar Panels and Automobiles</h3><ul class="list"><li><i class="fa-solid fa-circle-check"></i><span>Solar panel cleaning support</span></li><li><i class="fa-solid fa-circle-check"></i><span>Earthing boring for solar system services</span></li><li><i class="fa-solid fa-circle-check"></i><span>Automobile cleaning services</span></li></ul><a class="btn btn-secondary" href="./solar-panels.html">Read More</a></article>
+            <article class="card"><div class="package-tag"><i class="fa-solid fa-pen-nib"></i> Multimedia &amp; Software</div><h3>Adobe, 3D Max, Website, Software</h3><ul class="list"><li><i class="fa-solid fa-circle-check"></i><span>Multimedia work using Adobe tools, 3D Max, and AutoCAD designing</span></li><li><i class="fa-solid fa-circle-check"></i><span>Website development and software development</span></li><li><i class="fa-solid fa-circle-check"></i><span>Digital marketing, CRM, POS, Sale Bartender, Busy software, and video content</span></li></ul><a class="btn btn-secondary" href="./design/index.html">Read More</a></article>
+            <article class="card"><div class="package-tag"><i class="fa-solid fa-screwdriver-wrench"></i> Home Maintenance</div><h3>Plumbing, Electric, MS Structure, Paint</h3><ul class="list"><li><i class="fa-solid fa-circle-check"></i><span>Kitchen and washroom tap changing</span></li><li><i class="fa-solid fa-circle-check"></i><span>Switch board and basic electrical help</span></li><li><i class="fa-solid fa-circle-check"></i><span>Water filter installation and light RO plant service</span></li><li><i class="fa-solid fa-circle-check"></i><span>High quality MS structure including walk way</span></li><li><i class="fa-solid fa-circle-check"></i><span>Red oxide and epoxy paint support</span></li><li><i class="fa-solid fa-circle-check"></i><span>Coloring and paint services for homes and offices</span></li></ul></article>
+          <article class="card"><div class="package-tag"><i class="fa-solid fa-truck-fast"></i> Business and Support</div><h3>Warehouse, Tax Prep, Consultancy, Delivery</h3><ul class="list"><li><i class="fa-solid fa-circle-check"></i><span>Warehouse storage solutions and different racking systems</span></li><li><i class="fa-solid fa-circle-check"></i><span>Tax prep services offered through my team</span></li><li><i class="fa-solid fa-circle-check"></i><span>Resume and portfolio help for interviews, car sale and purchase help</span></li><li><i class="fa-solid fa-circle-check"></i><span>Online doctors consultancy, online teachers, and local delivery support</span></li></ul></article>
         </div>
       </div>
     </section>
@@ -323,7 +354,7 @@
           <div class="hero-points">
             <div><strong>Local and Online</strong><span>Support for nearby, remote, and international clients</span></div>
             <div><strong>Multi-Service</strong><span>Digital, software, warehouse, tax, consultancy, teaching, and support work</span></div>
-            <div><strong>Experience Based</strong><span>Built around previous jobs and practical client work</span></div>
+            <div><strong>Previous Jobs</strong><span>Experience-based positioning built on real practical client work</span></div>
           </div>
         </div>
         <div class="hero-card">
@@ -342,21 +373,6 @@
       </div>
     </section>
 
-    <section id="packages">
-      <div class="container">
-        <div class="section-head">
-          <div><h2>Main Service Offers</h2></div>
-          <p>Your homepage now groups the work into clear categories that match what you actually offer.</p>
-        </div>
-          <div class="packages">
-            <article class="card featured"><div class="package-tag"><i class="fa-solid fa-soap"></i> Cleaning Services</div><h3>Solar Panels and Automobiles</h3><ul class="list"><li><i class="fa-solid fa-circle-check"></i><span>Solar panel cleaning support</span></li><li><i class="fa-solid fa-circle-check"></i><span>Earthing boring for solar system services</span></li><li><i class="fa-solid fa-circle-check"></i><span>Automobile cleaning services</span></li></ul></article>
-            <article class="card"><div class="package-tag"><i class="fa-solid fa-pen-nib"></i> Multimedia &amp; Software</div><h3>Adobe, 3D Max, Website, Software</h3><ul class="list"><li><i class="fa-solid fa-circle-check"></i><span>Multimedia work using Adobe tools, 3D Max, and AutoCAD designing</span></li><li><i class="fa-solid fa-circle-check"></i><span>Website development and software development</span></li><li><i class="fa-solid fa-circle-check"></i><span>Digital marketing, CRM, POS, Sale Bartender, Busy software, and video content</span></li></ul></article>
-            <article class="card"><div class="package-tag"><i class="fa-solid fa-screwdriver-wrench"></i> Home Maintenance</div><h3>Plumbing, Electric, MS Structure, Paint</h3><ul class="list"><li><i class="fa-solid fa-circle-check"></i><span>Kitchen and washroom tap changing</span></li><li><i class="fa-solid fa-circle-check"></i><span>Switch board and basic electrical help</span></li><li><i class="fa-solid fa-circle-check"></i><span>Water filter installation and light RO plant service</span></li><li><i class="fa-solid fa-circle-check"></i><span>High quality MS structure including walk way</span></li><li><i class="fa-solid fa-circle-check"></i><span>Red oxide and epoxy paint support</span></li><li><i class="fa-solid fa-circle-check"></i><span>Coloring and paint services for homes and offices</span></li></ul></article>
-          <article class="card"><div class="package-tag"><i class="fa-solid fa-truck-fast"></i> Business and Support</div><h3>Warehouse, Tax Prep, Consultancy, Delivery</h3><ul class="list"><li><i class="fa-solid fa-circle-check"></i><span>Warehouse storage solutions and different racking systems</span></li><li><i class="fa-solid fa-circle-check"></i><span>Tax prep services offered through my team</span></li><li><i class="fa-solid fa-circle-check"></i><span>Resume and portfolio help for interviews, car sale and purchase help</span></li><li><i class="fa-solid fa-circle-check"></i><span>Online doctors consultancy, online teachers, and local delivery support</span></li></ul></article>
-        </div>
-      </div>
-    </section>
-
     <section id="pricing">
       <div class="container">
         <div class="section-head">
@@ -365,8 +381,22 @@
         </div>
         <div class="pricing">
           <article class="card"><div class="pill"><i class="fa-solid fa-earth-asia"></i> Client Reach</div><h3>Local, Online, International</h3><div class="price">Wide</div><p>This business is now positioned for nearby clients, remote online work, and international digital service inquiries.</p></article>
-          <article class="card price-featured"><div class="pill"><i class="fa-solid fa-briefcase"></i> Previous Jobs</div><h3>Experience-Based Positioning</h3><div class="price">Real</div><p>The site messaging now supports a business story built on previous jobs, practical work, and multi-category service experience.</p></article>
+          <article class="card price-featured"><div class="pill"><i class="fa-solid fa-briefcase"></i> Previous Jobs</div><h3>Experience-Based Positioning</h3><div class="price">Real</div><p>The site messaging now supports a business story built on previous jobs, practical work, and multi-category service experience.</p><ul class="estimate-list"><li><span>Previous Jobs</span><span>Visible</span></li><li><span>Experience-Based Positioning</span><span>Clear</span></li><li><span>Real</span><span>Practical story</span></li></ul></article>
           <article class="card"><div class="pill"><i class="fa-solid fa-sitemap"></i> Multi-Page Site</div><h3>Separate Services and Projects</h3><ul class="estimate-list"><li><span>Home page</span><span>Positioning</span></li><li><span>Services page</span><span>Dedicated</span></li><li><span>Projects page</span><span>Separate</span></li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Reviews</h2></div>
+          <p>Visible client feedback helps support the main page with practical trust and proof of work.</p>
+        </div>
+        <div class="pricing">
+          <article class="card"><div class="pill"><i class="fa-solid fa-star"></i> Review</div><h3>Fast and Clear</h3><div class="price">5 Star</div><p>Very cooperative communication and clear next steps. The service process felt direct and professional from start to finish.</p></article>
+          <article class="card price-featured"><div class="pill"><i class="fa-solid fa-thumbs-up"></i> Review</div><h3>Practical Experience</h3><div class="price">Trusted</div><p>Good support based on real work experience. Helpful for technical, service, and business-related needs.</p></article>
+          <article class="card"><div class="pill"><i class="fa-solid fa-shield-heart"></i> Review</div><h3>Reliable Support</h3><div class="price">Strong</div><p>Reliable follow-up, better understanding of client needs, and a wider service range that feels useful and real.</p></article>
         </div>
       </div>
     </section>
@@ -470,7 +500,7 @@
   </main>
   <footer>
     <div class="container footer-bar">
-        <p>Freelance Multimedia consultant and services in Karachi © 2025 - 2026</p>
+        <p>Freelance Multimedia consultant and services in Karachi Â© 2025 - 2026</p>
       <div class="footer-socials">
         <a href="https://www.youtube.com/@fahimnoorbhatti8211/videos" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         <a href="https://www.tiktok.com/@fahimnoorbhatti" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
@@ -500,3 +530,6 @@
   </script>
 </body>
 </html>
+
+
+

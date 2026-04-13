@@ -1,0 +1,233 @@
+/* Shared card styling so all pages use one consistent card system */
+:root{
+  --card-surface:var(--surface, rgba(20,20,20,.92));
+  --card-line:var(--line, rgba(255,255,255,.14));
+  --card-shadow:var(--shadow, 0 18px 50px rgba(0,0,0,.35));
+  --card-radius:var(--radius, 26px);
+  --card-pad:28px;
+}
+
+body{
+  color:#ffffff !important;
+}
+
+a,
+p,
+span,
+label,
+li,
+small,
+strong,
+em,
+div,
+.section-head p,
+.brand-copy span,
+.top-contact,
+.contact-item p,
+.testimonial-meta,
+.timeline-meta,
+.hero-copy p,
+.hero-card p,
+.card p,
+.card li{
+  color:#ffffff !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand-copy strong,
+.site-name{
+  color:#ffffff !important;
+}
+
+input,
+select,
+textarea{
+  color:#000000 !important;
+}
+
+input::placeholder,
+textarea::placeholder{
+  color:#444444 !important;
+}
+
+nav a,
+nav .submenu a{
+  color:#ffffff !important;
+}
+
+nav .submenu a:hover,
+nav .submenu a:focus-visible,
+nav a:hover,
+nav a:focus-visible,
+nav a[aria-current="page"]{
+  background:rgba(255,255,255,.08) !important;
+  color:#ffffff !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+
+.card,
+.hero-card,
+.media-card,
+.review-card,
+.profile-card,
+.timeline-card,
+.contact-card,
+.booking-card,
+.availability{
+  background:var(--card-surface) !important;
+  border:1px solid var(--card-line) !important;
+  border-radius:var(--card-radius) !important;
+  box-shadow:var(--card-shadow) !important;
+  padding:var(--card-pad) !important;
+}
+
+.card h3,
+.media-card h3,
+.review-card h3,
+.profile-card h3,
+.timeline-card h3,
+.contact-card h3,
+.booking-card h3,
+.availability h3{
+  margin-bottom:10px;
+  line-height:1.2;
+}
+
+.card p,
+.media-card p,
+.review-card p,
+.profile-card p,
+.timeline-card p,
+.contact-card p,
+.booking-card p,
+.availability p{
+  line-height:1.7;
+}
+
+.card .icon,
+.media-card .icon,
+.review-card .icon,
+.profile-card .pill,
+.timeline-card .pill,
+.contact-card .pill,
+.booking-card .pill,
+.availability .icon{
+  margin-bottom:16px !important;
+}
+
+.card:hover,
+.media-card:hover,
+.review-card:hover,
+.profile-card:hover,
+.timeline-card:hover{
+  transform:translateY(-2px);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.project-thumb,
+.media-shot,
+.video-frame,
+.profile-photo{
+  border-radius:calc(var(--card-radius) - 4px) !important;
+  overflow:hidden;
+}
+
+.btn,
+.card-link,
+.nav-cta,
+.menu-btn{
+  background:#ffffff !important;
+  color:#000000 !important;
+  border:1px solid #ffffff !important;
+  box-shadow:none !important;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-whatsapp,
+.nav-price,
+.nav-cta,
+.card-link{
+  background:#ffffff !important;
+  color:#000000 !important;
+  border:1px solid #ffffff !important;
+}
+
+.btn:hover,
+.btn:focus-visible,
+.card-link:hover,
+.card-link:focus-visible,
+.nav-cta:hover,
+.nav-cta:focus-visible,
+.menu-btn:hover,
+.menu-btn:focus-visible{
+  background:#000000 !important;
+  color:#ffffff !important;
+  border-color:#ffffff !important;
+}
+
+.pill,
+.eyebrow,
+.package-tag,
+.client-tag{
+  background:#000000 !important;
+  color:#ffffff !important;
+  border:1px solid #ffffff !important;
+}
+
+.icon,
+.footer-socials a,
+.brand-logo,
+.hero-mark{
+  color:#ffffff !important;
+  border-color:rgba(255,255,255,.18) !important;
+}
+
+.footer-socials a[aria-label="YouTube"]{background:#ff0000 !important;color:#ffffff !important;border-color:#ff0000 !important;}
+.footer-socials a[aria-label="TikTok"]{background:#000000 !important;color:#ffffff !important;border-color:#ffffff !important;}
+.footer-socials a[aria-label="Facebook"]{background:#1877f2 !important;color:#ffffff !important;border-color:#1877f2 !important;}
+.footer-socials a[aria-label="Instagram"]{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4) !important;color:#ffffff !important;border-color:#dd2a7b !important;}
+.footer-socials a[aria-label="LinkedIn"]{background:#0a66c2 !important;color:#ffffff !important;border-color:#0a66c2 !important;}
+.footer-socials a[aria-label="Twitter"]{background:#000000 !important;color:#ffffff !important;border-color:#ffffff !important;}
+.footer-socials a[aria-label="Pinterest"]{background:#e60023 !important;color:#ffffff !important;border-color:#e60023 !important;}
+.footer-socials a[aria-label="Gmail"]{background:#ffffff !important;color:#ea4335 !important;border-color:#d9d9d9 !important;}
+
+.floating-wa{
+  display:grid !important;
+  place-items:center !important;
+  background:#25d366 !important;
+  color:#ffffff !important;
+  border:2px solid #ffffff !important;
+  box-shadow:0 18px 30px rgba(0,0,0,.35) !important;
+  z-index:60 !important;
+}
+
+.floating-call{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  background:#ffffff !important;
+  color:#000000 !important;
+  border:2px solid #ffffff !important;
+  box-shadow:0 18px 30px rgba(0,0,0,.35) !important;
+  z-index:60 !important;
+}
+
+.floating-wa:hover,
+.floating-wa:focus-visible{
+  background:#128c7e !important;
+  color:#ffffff !important;
+}
+
+.floating-call:hover,
+.floating-call:focus-visible{
+  background:#000000 !important;
+  color:#ffffff !important;
+}
